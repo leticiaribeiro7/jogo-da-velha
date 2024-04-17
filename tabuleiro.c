@@ -97,11 +97,13 @@ int verificarColunas(char tabuleiro[3][3]) {
  * @return             1 se o jogo terminou em empate, 0 caso contrário. 
 */
 int verificarEmpate(char tabuleiro[3][3]) {
+    // Verifica se não há vencedor em nenhuma das condições possíveis
     int resultadoDiagonalPrincipal = verificaDiagonalPrincipal(tabuleiro);
     int resultadoDiagonalSecundaria = verificaDiagonalSecundaria(tabuleiro);
     int resultadoLinhas = verificarLinhas(tabuleiro);
     int resultadoColunas = verificarColunas(tabuleiro);
 
+    // Se nenhuma das condições indicar um vencedor, então há um empate
     if (!resultadoDiagonalPrincipal && !resultadoDiagonalSecundaria && !resultadoLinhas && !resultadoColunas) {
         //printf("EMPATE!");
         return 1;
