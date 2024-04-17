@@ -88,6 +88,14 @@ int verificarColunas(char tabuleiro[3][3]) {
     return 0;
 }
 
+/**
+ * Verifica se há empate no jogo.
+ * 
+ * Esta função verifica se o jogo terminou em empate.
+ * 
+ * @param tabuleiro    Matriz de dimensão 3x3
+ * @return             1 se o jogo terminou em empate, 0 caso contrário. 
+*/
 int verificarEmpate(char tabuleiro[3][3]) {
     int resultadoDiagonalPrincipal = verificaDiagonalPrincipal(tabuleiro);
     int resultadoDiagonalSecundaria = verificaDiagonalSecundaria(tabuleiro);
