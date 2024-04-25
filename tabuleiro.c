@@ -113,19 +113,3 @@ int verificarEmpate(char tabuleiro[3][3]) {
     }
 }
 
-int main() {
-    char tabuleiro[3][3] = {
-        {'X', 'X', 'O'},
-        {'O', 'O', 'X'},
-        {'X', 'O', 'O'}
-    };
-    imprimirTabuleiro(tabuleiro);
-
-    //verificaDiagonalPrincipal(tabuleiro);
-    //verificaDiagonalSecundaria(tabuleiro);
-    //verificarLinhas(tabuleiro);
-    //verificarColunas(tabuleiro);
-    //verificarEmpate(tabuleiro);
-    return 0;
-    
-}
