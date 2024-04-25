@@ -21,7 +21,8 @@ void imprimirTabuleiro(char tabuleiro[3][3]) {
 */
 int verificaDiagonalPrincipal(char tabuleiro[3][3]) {
 	char elemento = tabuleiro[0][0];
-	for (int i = 0; i < 3; i++) {
+    int i;
+	for (i = 0; i < 3; i++) {
 		if (tabuleiro[i][i] != elemento) {
 			return 0; 
 		}
@@ -38,7 +39,8 @@ int verificaDiagonalPrincipal(char tabuleiro[3][3]) {
 */
 int verificaDiagonalSecundaria(char tabuleiro[3][3]) {
     char elemento = tabuleiro[2][0];
-	for (int i = 0; i < 3; i++) {
+    int i;
+	for (i = 0; i < 3; i++) {
 		if (tabuleiro[i][2 - i] != elemento) {
             //printf(" NAO GANHOU");
 			return 0; 
@@ -111,5 +113,18 @@ int verificarEmpate(char tabuleiro[3][3]) {
     else {
         return 0;
     }
+
+}
+
+int verificaTabuleiroVazio(char tabuleiro[3][3]) {
+    int i, j;
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            if (tabuleiro[i][j] != ' ') {
+                return 0;
+            }
+        }
+    }
+    return 1;
 }
 
