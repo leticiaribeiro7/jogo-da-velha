@@ -15,7 +15,7 @@ int main() {
     signed char x_disp, y_disp;
     int x = 0, y = 0; // Inicialize x e y com zero
     char mouse_buffer[3]; 
-    int quadrante;
+    int quadrante = 0;
     char jogador = 'X';
 
     fd = open(MOUSEFILE, O_RDONLY);
@@ -50,8 +50,8 @@ int main() {
             }
             printf("Botão: %d, Posição X: %d, Posição Y: %d\n", button, x, y);
 
-            if (quadrante == 0) {
-                printf("Você está fora do tabuleiro!");
+            if (x < 0 || y < 0) {
+                printf("Voce está fora do tabuleiro");
             } else {
                 printf("Você está no quadrante %d", quadrante);
             }
@@ -60,19 +60,49 @@ int main() {
             if (x > 0 && x < 50 ) {
                 if (y > 0 && y < 50) {
                     quadrante = 1;
+                    if (leftButton) tabuleiro[0][0] = jogador;
                 } else if (y > 51 && y < 100) {
                     quadrante = 4;
+                    if(leftButton) tabuleiro[1][0] = jogador;
                 } else if (y > 101 && y < 150) {
                     quadrante = 7;
+                    if(leftButton) tabuleiro[2][0] = jogador;
+                }
+            } else if (x > 51 && x < 100) {
+                if (y > 0 && y < 50) {
+                    quadrante = 2;
+                    if(leftButton) tabuleiro[0][1] = jogador;
+                } else if (y > 51 && y < 100) {
+                    quadrante = 5;
+                    if(leftButton) tabuleiro[1][1] = jogador;
+                } else if (y > 101 && y < 150) {
+                    quadrante = 8;
+                    if(leftButton) tabuleiro[2][1] = jogador;
+                }
+            } else if (x > 101 && x < 200) {
+                if(y > 0 && y < 50) {
+                    quadrante = 3;
+                    if (leftButton) tabuleiro[0][2] = jogador;
+                } else if (y > 51 && y < 100) {
+                    quadrante = 6;
+                    if(leftButton) tabuleiro[1][2] = jogador;
+                } else if (y > 101 && y < 200) {
+                    quadrante = 9;
+                    if(leftButton) tabuleiro[2][2] = jogador;
                 }
             }
 
-            jogador = (jogador == 'X') ? 'O' : 'X'; // alterna jogadores
-
-            if (leftButton) { // col lin
-                tabuleiro[0][quadrante-1] = jogador; // so funciona pra col 0
+            if(x > 200 || y > 200){
+                printf("Voce está fora do tabuleiro");
             }
+
+
+            jogador = (jogador == 'X') ? 'O' : 'X'; // alterna jogadores
         }
+
+        //if ((verificaDiagonalPrincipal(tabuleiro) || verificarLinhas(tabuleiro) || verificarColunas(tabuleiro) || verificaDiagonalSecundaria(tabuleiro)) && !verificaTabuleiroVazio(tabuleiro)) {
+          //  printf("Ganhou");
+        //}
 
         usleep(10000); // Espera 10ms antes de verificar novamente o mouse
     }
