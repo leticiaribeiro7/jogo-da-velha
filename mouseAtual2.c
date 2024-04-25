@@ -16,6 +16,7 @@ int main() {
     int x = 0, y = 0; // Inicialize x e y com zero
     char mouse_buffer[3]; 
     int quadrante;
+    char jogador = 'X';
 
     fd = open(MOUSEFILE, O_RDONLY);
 
@@ -34,7 +35,6 @@ int main() {
        // imprimirTabuleiro(tabuleiro);
 
         if (read(fd, &mouse_buffer, sizeof(mouse_buffer)) > 0) {
-            //printf("\033[H\033[J");
             imprimirTabuleiro(tabuleiro);
 
             button = mouse_buffer[0] & 0x07; // Extrai os bits do botão do buffer
@@ -53,7 +53,7 @@ int main() {
             if (quadrante == 0) {
                 printf("Você está fora do tabuleiro!");
             } else {
-                printf("Você está no quadrante %d", quadrante)
+                printf("Você está no quadrante %d", quadrante);
             }
 
             // primeira coluna
@@ -67,8 +67,10 @@ int main() {
                 }
             }
 
+            jogador = (jogador == 'X') ? 'O' : 'X'; // alterna jogadores
+
             if (leftButton) { // col lin
-                tabuleiro[0][quadrante-1] = 'X'; // so funciona pra col 0
+                tabuleiro[0][quadrante-1] = jogador; // so funciona pra col 0
             }
         }
 
