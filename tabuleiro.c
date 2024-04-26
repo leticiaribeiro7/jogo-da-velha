@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 
 void imprimirTabuleiro(char tabuleiro[3][3]) {
     printf("\n");
@@ -61,7 +62,7 @@ int verificarLinhas(char tabuleiro[3][3]) {
     int lin;
 
     for (lin = 0; lin < 3; lin++) {
-        if (tabuleiro[lin][0] == tabuleiro[lin][1]  && tabuleiro[lin][1] == tabuleiro[lin][2]) {
+        if ((tabuleiro[lin][0] == tabuleiro[lin][1]) && (tabuleiro[lin][1] == tabuleiro[lin][2])) {
             //printf("GANHOU");
             return 1;
         }
@@ -120,11 +121,28 @@ int verificaTabuleiroVazio(char tabuleiro[3][3]) {
     int i, j;
     for (i = 0; i < 3; i++) {
         for (j = 0; j < 3; j++) {
-            if (tabuleiro[i][j] != ' ') {
+            if (!isspace(tabuleiro[i][j])) {
                 return 0;
             }
         }
     }
     return 1;
+}
+
+int verificarVitoria (char tabuleiro[3][3]) {
+    printf("tabuleiro vazio: %d\n", verificaTabuleiroVazio(tabuleiro));
+
+
+    int resultadoDiagonalPrincipal = verificaDiagonalPrincipal(tabuleiro);
+    int resultadoDiagonalSecundaria = verificaDiagonalSecundaria(tabuleiro);
+    int resultadoLinhas = verificarLinhas(tabuleiro);
+    int resultadoColunas = verificarColunas(tabuleiro);
+    int tabVazio = verificaTabuleiroVazio(tabuleiro);
+    
+    if ((resultadoDiagonalPrincipal || resultadoDiagonalSecundaria || resultadoLinhas || resultadoColunas) && (!tabVazio)) {
+        printf("ganhou\n");
+        return 1;
+    }
+
 }
 

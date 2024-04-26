@@ -8,6 +8,7 @@
 #define MOUSEFILE "/dev/input/mice"
 
 
+
 int main() {
     int fd;
     char button;
@@ -17,6 +18,7 @@ int main() {
     char mouse_buffer[3]; 
     int quadrante = 0;
     char jogador = 'X';
+    int i, j;
 
     fd = open(MOUSEFILE, O_RDONLY);
 
@@ -32,9 +34,9 @@ int main() {
     };
 
     while (1) {
-       // imprimirTabuleiro(tabuleiro);
-
+       
         if (read(fd, &mouse_buffer, sizeof(mouse_buffer)) > 0) {
+            system("clear");
             imprimirTabuleiro(tabuleiro);
 
             button = mouse_buffer[0] & 0x07; // Extrai os bits do botão do buffer
@@ -50,13 +52,13 @@ int main() {
             }
             printf("Botão: %d, Posição X: %d, Posição Y: %d\n", button, x, y);
 
-            if (x < 0 || y < 0) {
+            if (x < 0 || y < 0 || x > 200 || y > 200) {
                 printf("Voce está fora do tabuleiro");
             } else {
                 printf("Você está no quadrante %d", quadrante);
             }
 
-            // primeira coluna
+            // atualiza quadrante e faz a jogada
             if (x > 0 && x < 50 ) {
                 if (y > 0 && y < 50) {
                     quadrante = 1;
@@ -92,17 +94,12 @@ int main() {
                 }
             }
 
-            if(x > 200 || y > 200){
-                printf("Voce está fora do tabuleiro");
-            }
-
 
             jogador = (jogador == 'X') ? 'O' : 'X'; // alterna jogadores
         }
 
-        //if ((verificaDiagonalPrincipal(tabuleiro) || verificarLinhas(tabuleiro) || verificarColunas(tabuleiro) || verificaDiagonalSecundaria(tabuleiro)) && !verificaTabuleiroVazio(tabuleiro)) {
-          //  printf("Ganhou");
-        //}
+        verificarVitoria(tabuleiro);
+        verificarEmpate(tabuleiro);
 
         usleep(10000); // Espera 10ms antes de verificar novamente o mouse
     }
