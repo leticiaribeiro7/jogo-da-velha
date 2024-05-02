@@ -24,12 +24,12 @@ int verificaDiagonalPrincipal(char tabuleiro[3][3]) {
 	char elemento = tabuleiro[0][0];
     int i;
 	for (i = 0; i < 3; i++) {
-		if (tabuleiro[i][i] != elemento || tabuleiro[i][i] == ' ') {
+		if (tabuleiro[i][i] != elemento) {
 		    //printf("nao ganhou\n");
 			return 0; 
 		}
 	}
-	//printf("ganhou");
+	//printf("ganhou");,
 	return 1; 
 }
 
@@ -44,7 +44,7 @@ int verificaDiagonalSecundaria(char tabuleiro[3][3]) {
     char elemento = tabuleiro[2][0];
     int i;
 	for (i = 0; i < 3; i++) {
-		if (tabuleiro[i][2 - i] != elemento || tabuleiro[i][2 - i] == ' ') {
+		if (tabuleiro[i][2 - i] != elemento) {
             //printf(" NAO GANHOU");
 			return 0; 
 		}
@@ -64,7 +64,7 @@ int verificarLinhas(char tabuleiro[3][3]) {
     int lin;
 
     for (lin = 0; lin < 3; lin++) {
-        if ((tabuleiro[lin][0] == tabuleiro[lin][1]) && (tabuleiro[lin][1] == tabuleiro[lin][2]) && tabuleiro[lin][0] != ' ') {
+        if ((tabuleiro[lin][0] == tabuleiro[lin][1]) && (tabuleiro[lin][1] == tabuleiro[lin][2])) {
             //printf("GANHOU");
             return 1;
         }
@@ -84,7 +84,7 @@ int verificarColunas(char tabuleiro[3][3]) {
     int col;
 
     for (col = 0; col < 3; col++) {
-        if (tabuleiro[0][col] == tabuleiro[1][col] && tabuleiro[1][col] == tabuleiro[2][col] && tabuleiro[0][col] != ' ') {
+        if (tabuleiro[0][col] == tabuleiro[1][col] && tabuleiro[1][col] == tabuleiro[2][col]) {
             //printf("GANHOU");
             return 1;
         }
@@ -139,7 +139,6 @@ int verificarVitoria(char tabuleiro[3][3]) {
     int resultadoDiagonalSecundaria = verificaDiagonalSecundaria(tabuleiro);
     int resultadoLinhas = verificarLinhas(tabuleiro);
     int resultadoColunas = verificarColunas(tabuleiro);
-    int tabVazio = verificaTabuleiroVazio(tabuleiro);
 
     if (resultadoDiagonalPrincipal || resultadoDiagonalSecundaria || resultadoLinhas || resultadoColunas) {
         //printf("ganhou");
