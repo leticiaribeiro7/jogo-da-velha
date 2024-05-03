@@ -7,7 +7,6 @@
 
 #define MOUSEFILE "/dev/input/mice"
 
-
 char alternaJogadores(int leftButton, int jogadas) {
     if (jogadas % 2 == 0) {
         return 'X';
@@ -23,6 +22,7 @@ int jogadaValida(char tabuleiro[3][3], int i, int j) {
     return 1;
 }
 
+}
 
 
 int main() {
@@ -38,7 +38,8 @@ int main() {
     int jogadas = 0;
     int ultimoEstadoBotao = 0;
 
-    fd = open(MOUSEFILE, O_RDONLY);
+    fd = open(MOUSEFILE, O_RDONLY); // abre arquivo do mouse
+    KEY_open(); // abre botões
 
     if (fd == -1) {
         perror("Não é possível abrir o dispositivo do mouse");
@@ -84,13 +85,13 @@ int main() {
                     }
                 } else if (y > 51 && y < 100) {
                     quadrante = 4;
-                    if(leftButton) {
+                    if(leftButton && jogadaValida(tabuleiro, 1, 0)) {
                         tabuleiro[1][0] = jogador;
                         jogadas++;
                     }
                 } else if (y > 101) {
                     quadrante = 7;
-                    if(leftButton) {
+                    if(leftButton && jogadaValida(tabuleiro, 2, 0)) {
                         tabuleiro[2][0] = jogador;
                         jogadas++;
                     }
@@ -98,19 +99,19 @@ int main() {
             } else if (x > 51 && x < 100) {
                 if (y < 50) {
                     quadrante = 2;
-                    if(leftButton) {
+                    if(leftButton && jogadaValida(tabuleiro, 0, 1)) {
                         tabuleiro[0][1] = jogador;
                         jogadas++;
                     }
                 } else if (y > 51 && y < 100) {
                     quadrante = 5;
-                    if(leftButton) {
+                    if(leftButton && jogadaValida(tabuleiro, 1, 1)) {
                         tabuleiro[1][1] = jogador;
                         jogadas++;
                     }
                 } else if (y > 101) {
                     quadrante = 8;
-                    if(leftButton) {
+                    if(leftButton && jogadaValida(tabuleiro, 2, 1)) {
                         tabuleiro[2][1] = jogador;
                         jogadas++;
                     }
@@ -118,42 +119,42 @@ int main() {
             } else if (x > 101 && x < 200) {
                 if(y < 50) {
                     quadrante = 3;
-                    if (leftButton) {
+                    if (leftButton && jogadaValida(tabuleiro, 0, 2)) {
                         tabuleiro[0][2] = jogador;
                         jogadas++;
                     }
 
                 } else if (y > 51 && y < 100) {
                     quadrante = 6;
-                    if(leftButton) {
+                    if(leftButton && jogadaValida(tabuleiro, 1, 2)) {
                         tabuleiro[1][2] = jogador;
                         jogadas++;
                     }
                 } else if (y > 101) {
                     quadrante = 9;
-                    if(leftButton) {
+                    if(leftButton && jogadaValida(tabuleiro, 2, 2)) {
                         tabuleiro[2][2] = jogador;
                         jogadas++;
                     }
                 }
             }
-
         }
 
         int vitoria = verificarVitoria(tabuleiro);
         int empate = verificarEmpate(tabuleiro);
 
         if (vitoria) {
+            system("clear");
+            imprimirTabuleiro(tabuleiro);
             printf("%c Ganhou!\n", jogador);
             break;
             
         } else if(empate && jogadas == 9) {
             printf("Empate\n");
-
         }
 
-        printf("jogadas: %d", jogadas);
-        usleep(10000); // Espera 10ms antes de verificar novamente o mouse
+        printf("Jogadas: %d", jogadas);
+        usleep(2000); // Espera 20ms antes de verificar novamente o mouse
     }
 
     close(fd);
