@@ -1,3 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <termios.h>
+#include "tabuleiro.h"
+#include "intelfpgaup/KEY.h"
+
+#define MOUSEFILE "/dev/input/mice"
+
+char alternaJogadores(int jogadas) {
+    if (jogadas % 2 == 0) {
+        return 'X';
+    }
+    return 'O';
+}
+
+
+// Limitando coordenadas entre 1 e 200
+void limitarCursor(int *x, int *y) {
+    if (*x <= 1) *x = 1;
+    if (*y <= 1) *y = 1;
+    if (*x >= 200) *x = 200;
+    if (*y >= 200) *y = 200;
+}
+
+int determinarQuadrante(int x, int y) {
+    int quadrante;
+
+    if (x < 50) {
+        quadrante = 1;
+    } else if (x < 100) {
+        quadrante = 2;
+    } else {
+        quadrante = 3;
+    }
+
+    if (y >= 50 && y < 100) {
+        quadrante += 3;
+    } else if (y >= 100) {
+        quadrante += 6;
+    }
+
+    return quadrante;
+}
+
 int main() {
     int fd;
     int leftButton;
