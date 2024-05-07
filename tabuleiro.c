@@ -149,3 +149,10 @@ int verificarVitoria(char tabuleiro[3][3]) {
     }
 
 }
+
+int jogadaValida(char tabuleiro[3][3], int i, int j) {
+    if (tabuleiro[i][j] == 'X' || tabuleiro[i][j] == 'O') {
+        return 0;
+    }
+    return 1;
+}
