@@ -25,11 +25,9 @@ int verificaDiagonalPrincipal(char tabuleiro[3][3]) {
     int i;
 	for (i = 0; i < 3; i++) {
 		if (tabuleiro[i][i] != elemento) {
-		    //printf("nao ganhou\n");
 			return 0; 
 		}
 	}
-	//printf("ganhou");,
 	return 1; 
 }
 
@@ -45,11 +43,9 @@ int verificaDiagonalSecundaria(char tabuleiro[3][3]) {
     int i;
 	for (i = 0; i < 3; i++) {
 		if (tabuleiro[i][2 - i] != elemento) {
-            //printf(" NAO GANHOU");
 			return 0; 
 		}
 	}
-    //printf("GANHOU");
 	return 1; 
 }
 
@@ -65,11 +61,9 @@ int verificarLinhas(char tabuleiro[3][3]) {
 
     for (lin = 0; lin < 3; lin++) {
         if ((tabuleiro[lin][0] == tabuleiro[lin][1]) && (tabuleiro[lin][1] == tabuleiro[lin][2])) {
-            //printf("GANHOU");
             return 1;
         }
     }
-    //printf("NAO GANHOU");
     return 0;
 }
 
@@ -85,11 +79,9 @@ int verificarColunas(char tabuleiro[3][3]) {
 
     for (col = 0; col < 3; col++) {
         if (tabuleiro[0][col] == tabuleiro[1][col] && tabuleiro[1][col] == tabuleiro[2][col]) {
-            //printf("GANHOU");
             return 1;
         }
     }
-    //printf("NAO GANHOU");
     return 0;
 }
 
@@ -101,7 +93,7 @@ int verificarColunas(char tabuleiro[3][3]) {
  * @param tabuleiro    Matriz de dimensão 3x3
  * @return             1 se o jogo terminou em empate, 0 caso contrário. 
 */
-int verificarEmpate(char tabuleiro[3][3]) {
+int verificarEmpate(char tabuleiro[3][3], int *jogadas) {
     // Verifica se não há vencedor em nenhuma das condições possíveis
     int resultadoDiagonalPrincipal = verificaDiagonalPrincipal(tabuleiro);
     int resultadoDiagonalSecundaria = verificaDiagonalSecundaria(tabuleiro);
@@ -109,8 +101,10 @@ int verificarEmpate(char tabuleiro[3][3]) {
     int resultadoColunas = verificarColunas(tabuleiro);
 
     // Se nenhuma das condições indicar um vencedor, então há um empate
-    if (!resultadoDiagonalPrincipal && !resultadoDiagonalSecundaria && !resultadoLinhas && !resultadoColunas) {
-        //printf("EMPATE!");
+    if (!resultadoDiagonalPrincipal &&
+        !resultadoDiagonalSecundaria &&
+        !resultadoLinhas && 
+        !resultadoColunas && *jogadas == 9) {
         return 1;
     }
     else {
@@ -119,33 +113,16 @@ int verificarEmpate(char tabuleiro[3][3]) {
 
 }
 
-// retorna 1 se NÃO estiver vazia, e 0 se ESTIVER vazia.
-int verificaTabuleiroVazio(char tabuleiro[3][3]) {
-    int i, j;
-    for (i = 0; i < 3; i++) {
-        for (j = 0; j < 3; j++) {
-            if (!isspace(tabuleiro[i][j])) {
-                return 1;
-            }
-        }
-    }
-    return 0;
-}
-
 int verificarVitoria(char tabuleiro[3][3]) {
-    //printf("tabuleiro vazio: %d\n", verificaTabuleiroVazio(tabuleiro));
-
     int resultadoDiagonalPrincipal = verificaDiagonalPrincipal(tabuleiro);
     int resultadoDiagonalSecundaria = verificaDiagonalSecundaria(tabuleiro);
     int resultadoLinhas = verificarLinhas(tabuleiro);
     int resultadoColunas = verificarColunas(tabuleiro);
 
     if (resultadoDiagonalPrincipal || resultadoDiagonalSecundaria || resultadoLinhas || resultadoColunas) {
-        //printf("ganhou");
         return 1;
     } else {
         return 0;
-        //printf("nao ganhou");
     }
 
 }

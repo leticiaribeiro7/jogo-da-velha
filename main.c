@@ -4,7 +4,7 @@
 #include <fcntl.h>
 #include <termios.h>
 #include "tabuleiro.h"
-#include "intelfpgaup/KEY.h"
+ #include "intelfpgaup/KEY.h"
 
 #define MOUSEFILE "/dev/input/mice"
 
@@ -109,9 +109,6 @@ int main() {
                 x += x_disp;
                 y -= y_disp;
 
-                // if (leftButton) { // Verifica se o bit 0 (botão esquerdo) está definido
-                //     printf("Clicou em x=%d e y=%d\n", x, y);
-                // }
                 //printf("Botão: %d, Posição X: %d, Posição Y: %d\n", button, x, y);
 
                 printf("Vez do jogador %c\n\n", jogador);
@@ -132,7 +129,7 @@ int main() {
             limitarCursor(&x, &y);
 
             int vitoria = verificarVitoria(tabuleiro);
-            int empate = verificarEmpate(tabuleiro);
+            int empate = verificarEmpate(tabuleiro, &jogadas);
 
             if (vitoria) {
                 system("clear");
@@ -140,7 +137,7 @@ int main() {
                 printf("%c Ganhou!\n", jogador);
                 break;
                 
-            } else if (empate && jogadas == 9) {
+            } else if (empate) {
                 system("clear");
                 imprimirTabuleiro(tabuleiro);
                 printf("Empate!\n");
