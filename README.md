@@ -25,7 +25,9 @@
 ## Softwares e Periféricos Utilizados
 
 ### Kit de desenvolvimento DE1-SoC
+<div style="text-align: justify;">
 A placa de desenvolvimento DE1-SoC é uma plataforma baseada no chip Altera Cyclone V SoC, que integra um processador ARM Cortex-A9 dual-core com uma FPGA da família Cyclone V. A DE1-SoC possui uma ampla variedade de periféricos e interfaces, incluindo:
+</div>
 - Interfaces de entrada/saída;
 - Conexões de áudio de vídeo;
 - Interface USB;
