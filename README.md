@@ -34,6 +34,8 @@ A placa de desenvolvimento DE1-SoC é uma plataforma baseada no chip Altera Cycl
 
 <p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/placa.jpg" alt="Placa DE1-SoC" width="400">
+    <br>
+    Figura 1. Esta é a placa de desenvolvimento DE1-SoC.
 </p>
 
 
