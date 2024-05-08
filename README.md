@@ -18,7 +18,7 @@
 - [Referências](#referências)
 
 ## Equipe
-- 
+- Jeferson Almeida da Silva Ribeiro
 - Letícia Teixeira Ribeiro dos Santos
 - Vitória Tanan dos Santos
 
