@@ -20,12 +20,20 @@
 ## Equipe
 - 
 - Letícia Teixeira Ribeiro dos Santos
--
+- Vitória Tanan dos Santos
 
 ## Softwares e Periféricos Utilizados
 
-### Kit de desenvolvimento DE1 SoC
---
+### Kit de desenvolvimento DE1-SoC
+A placa de desenvolvimento DE1-SoC é uma plataforma baseada no chip Altera Cyclone V SoC, que integra um processador ARM Cortex-A9 dual-core com uma FPGA da família Cyclone V. A DE1-SoC possui uma ampla variedade de periféricos e interfaces, incluindo:
+- Interfaces de entrada/saída;
+- Conexões de áudio de vídeo;
+- Interface USB;
+- Conexões Ethernet;
+- LEDS, chaves e botões, entre outros.
+
+<img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/placa.png" alt="Placa DE1-SoC">
+
 ### Linguagem C
 --
 ### Compilador GCC
