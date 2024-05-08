@@ -5,7 +5,7 @@ SOURCES = main.c tabuleiro.c
 all: $(TARGET)
 
 $(TARGET): $(SOURCES)
-	$(CC) $^ -o $@
+	$(CC) $^ -o $@ -lintelfpgaup
 
 .PHONY: clean
 clean:

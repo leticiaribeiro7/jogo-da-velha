@@ -4,7 +4,6 @@
 
 ## Sumário
 - [Softwares e Periféricos Utilizados](#softwares-e-periféricos-utilizados)
-
     - [Kit de desenvolvimento DE1 SoC](#kit-de-desenvolvimento-de1-soc)
     - [Linguagem C](#linguagem-c)
     - [Compilador GCC](#compilador-gcc)
@@ -48,9 +47,12 @@ A placa de desenvolvimento DE1-SoC é uma plataforma baseada no chip Altera Cycl
 ### Compilador GCC
 --
 ### Editor de texto VSCode
---
+
+O Visual Studio Code é um editor de texto bastante popular que tem suporte para Windows, Linux e MacOS. Neste projeto, o VSCode foi utilizado para fins de edição do código em linguagem C, usufruindo do realce de sintaxe que o programa propociona.
+
 ### Mouse
---
+
+Foi utilizado um mouse como dispositivo periférico que serve de entrada para o jogador selecionar a posição no tabuleiro do jogo e realizar a jogada. Para tal, o mouse é conectado na [DE1-SoC](#kit-de-desenvolvimento-de1-soc) através de uma de suas entradas USB.  (add foto da placa com mouse)
 
 
 ## Arquitetura da De1SoC
@@ -59,7 +61,14 @@ A placa de desenvolvimento DE1-SoC é uma plataforma baseada no chip Altera Cycl
 
 ## Execução
 
-## Lógica do Jogo
+Para executar o jogo, basta clonar este repositório e na pasta raiz do projeto os seguintes comandos:
+
+```bash
+make all
+sudo ./jogo.exe
+```
+
+## Funcionamento do Jogo
 
 ## Cenários de Testes
 
