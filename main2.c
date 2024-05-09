@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
-//#include <termios.h>
 #include "tabuleiro.h"
 #include "intelfpgaup/KEY.h"
 
@@ -24,24 +23,24 @@ void limitarCursor(int *x, int *y) {
     if (*y >= 200) *y = 200;
 }
 
-int determinarQuadrante(int x, int y) {
-    int quadrante;
+int determinarCasa(int x, int y) {
+    int casa;
 
     if (x < 50) {
-        quadrante = 1;
+        casa = 1;
     } else if (x < 100) {
-        quadrante = 2;
+        casa = 2;
     } else {
-        quadrante = 3;
+        casa = 3;
     }
 
     if (y >= 50 && y < 100) {
-        quadrante += 3;
+        casa += 3;
     } else if (y >= 100) {
-        quadrante += 6;
+        casa += 6;
     }
 
-    return quadrante;
+    return casa;
 }
 
 int main() {
@@ -49,15 +48,14 @@ int main() {
     int fd;
     int leftButton;
     signed char x_disp, y_disp;
-    int x = 0, y = 0; // Inicialize x e y com zero
+    int x = 0, y = 0;
     char mouse_buffer[3];
-    int quadrante = 0;
+    int casa = 0;
     char jogador = ' ';
     int jogadas = 0;
     int dataButton = 0b0;
-    //int jogoIniciado = 0; // Flag para controlar se o jogo já foi iniciado
     int executando = 1; // Flag para executar o jogo
-    int controladorCliques = 0;
+    int controladorCliques = 1;
 
     fd = open(MOUSEFILE, O_RDONLY); // Abre arquivo do mouse
     KEY_open(); // Abre botões da placa
@@ -73,34 +71,38 @@ int main() {
         {'7', '8', '9'}
     };
 
-    //KEY_read(&dataButton);
-       // printf("botao: %d", dataButton);
+    // Mapeamento do quadrante para as posições do tabuleiro
+    int posicoes[9][2] = {
+        {0, 0}, {0, 1}, {0, 2},
+        {1, 0}, {1, 1}, {1, 2},
+        {2, 0}, {2, 1}, {2, 2}
+    };
+
 
     
     printf("Clique no botão KEY0 para iniciar a partida\n");
 
     while (executando) {
-        KEY_read(&dataButton);
-        printf("botao: %d", dataButton);
 
+        KEY_read(&dataButton);
+
+        // Se o botão KEY1 for pressionado, o jogo termina
         if (dataButton == 0b10) {
             printf("Saindo do jogo...");
             dataButton = 0;
             break;
-        } 
+        } // Se o botão KEY0 é pressionado, o jogo inicia
         else if (dataButton == 0b01) {
             controladorCliques = 1;
-            printf("===== JOGO =====\n\n");
-            printf("Jogadas: %d\n", jogadas);
             imprimirTabuleiro(tabuleiro);
+            printf("Jogadas: %d\n", jogadas);
         }
 
         while (controladorCliques) { // inicia a partida
             if (read(fd, &mouse_buffer, sizeof(mouse_buffer)) > 0) {
                 system("clear");
-                printf("===== JOGO DA VELHA =====\n\n");
-                printf("Jogadas: %d\n", jogadas);
                 imprimirTabuleiro(tabuleiro);
+                printf("Jogadas: %d\n\n", jogadas);
 
                 x_disp = mouse_buffer[1];
                 y_disp = mouse_buffer[2];
@@ -111,13 +113,13 @@ int main() {
 
                 limitarCursor(&x, &y);
 
+                casa = determinarCasa(x, y);
+                printf("Você está na casa %d\n", casa);
+
                 printf("Vez do jogador %c\n\n", jogador);
 
-                quadrante = determinarQuadrante(x, y);
-                printf("Você está no quadrante %d\n", quadrante);
-
-                int i = (quadrante - 1) / 3;
-                int j = (quadrante - 1) % 3;
+                int i = posicoes[casa-1][0];
+                int j = posicoes[casa-1][1];
 
                 if (leftButton && jogadaValida(tabuleiro, i, j)) {
                     tabuleiro[i][j] = jogador;
@@ -131,22 +133,14 @@ int main() {
                 if (vitoria) {
                     system("clear");
                     imprimirTabuleiro(tabuleiro);
-                    printf("%c Ganhou!\n Jogar novamente? aperte botao 0, senao 1\n", jogador);
-                    //if (dataButton == 1) {
-                        //continue;
-                    if(dataButton == 2) {
-                        printf("%d", dataButton);
-                        dataButton = 0;
-                        break;
-                    }
-                    // Reseta o jogo
-                    //controladorCliques = 0;
+                    printf("%c Ganhou!\n", jogador);
+                    controladorCliques = 0;
+                    
                     
                 } else if (empate) {
                     system("clear");
                     imprimirTabuleiro(tabuleiro);
                     printf("Empate!\n");
-                    // Reseta o jogo
                     controladorCliques = 0;
                 }
 

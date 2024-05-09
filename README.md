@@ -71,6 +71,11 @@ sudo ./jogo.exe
 ## Funcionamento do Jogo
 
 ## Cenários de Testes
+- vitoria
+- empate
+- quando clica numa casa
+- tentativa de marcar casa ocupada
+
 
 ## Conclusão
 

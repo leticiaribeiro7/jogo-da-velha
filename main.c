@@ -2,9 +2,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
-#include <termios.h>
 #include "tabuleiro.h"
- #include "intelfpgaup/KEY.h"
+#include "intelfpgaup/KEY.h"
 
 #define MOUSEFILE "/dev/input/mice"
 
@@ -24,43 +23,42 @@ void limitarCursor(int *x, int *y) {
     if (*y >= 200) *y = 200;
 }
 
-int determinarQuadrante(int x, int y) {
-    int quadrante;
+int determinarCasa(int x, int y) {
+    int casa;
 
     if (x < 50) {
-        quadrante = 1;
+        casa = 1;
     } else if (x < 100) {
-        quadrante = 2;
+        casa = 2;
     } else {
-        quadrante = 3;
+        casa = 3;
     }
 
     if (y >= 50 && y < 100) {
-        quadrante += 3;
+        casa += 3;
     } else if (y >= 100) {
-        quadrante += 6;
+        casa += 6;
     }
 
-    return quadrante;
+    return casa;
 }
 
-
 int main() {
-    
+
     int fd;
     int leftButton;
     signed char x_disp, y_disp;
-    int x = 0, y = 0; // Inicialize x e y com zero
-    char mouse_buffer[3]; 
-    int quadrante = 0;
+    int x = 0, y = 0;
+    char mouse_buffer[3];
+    int casa = 0;
     char jogador = ' ';
     int jogadas = 0;
     int dataButton = 0b0;
-    int leitura = 1;
-    
+    int executando = 1; // Flag para executar o jogo
+    int controladorCliques = 1;
 
-    fd = open(MOUSEFILE, O_RDONLY); // abre arquivo do mouse
-    KEY_open(); // abre botões
+    fd = open(MOUSEFILE, O_RDONLY); // Abre arquivo do mouse
+    KEY_open(); // Abre botões da placa
 
     if (fd == -1) {
         perror("Não é possível abrir o dispositivo do mouse");
@@ -73,18 +71,6 @@ int main() {
         {'7', '8', '9'}
     };
 
-    printf("Para iniciar o jogo clique no botão");
-
-    //inicia ao clicar o botão KEY0
-    while(leitura){
-    KEY_read(&dataButton);
-    
-    if(dataButton){
-        leitura = 0;
-    }
-    sleep(1);
-    }
-
     // Mapeamento do quadrante para as posições do tabuleiro
     int posicoes[9][2] = {
         {0, 0}, {0, 1}, {0, 2},
@@ -92,15 +78,31 @@ int main() {
         {2, 0}, {2, 1}, {2, 2}
     };
 
-    if (dataButton) {
-        while (1) {
-        
+
+    
+    printf("Clique no botão KEY0 para iniciar a partida\n");
+
+    while (executando) {
+
+        KEY_read(&dataButton);
+
+        // Se o botão KEY1 for pressionado, o jogo termina
+        if (dataButton == 0b10) {
+            printf("Saindo do jogo...");
+            dataButton = 0;
+            break;
+        } // Se o botão KEY0 é pressionado, o jogo inicia
+        else if (dataButton == 0b01) {
+            controladorCliques = 1;
+            imprimirTabuleiro(tabuleiro);
+            printf("Jogadas: %d\n", jogadas);
+        }
+
+        while (controladorCliques) { // inicia a partida
             if (read(fd, &mouse_buffer, sizeof(mouse_buffer)) > 0) {
-                
                 system("clear");
-                printf("===== JOGO DA VELHA =====\n\n");
-                printf("Jogadas: %d\n", jogadas);
                 imprimirTabuleiro(tabuleiro);
+                printf("Jogadas: %d\n\n", jogadas);
 
                 x_disp = mouse_buffer[1];
                 y_disp = mouse_buffer[2];
@@ -109,44 +111,42 @@ int main() {
                 x += x_disp;
                 y -= y_disp;
 
-                //printf("Botão: %d, Posição X: %d, Posição Y: %d\n", button, x, y);
+                limitarCursor(&x, &y);
+
+                casa = determinarCasa(x, y);
+                printf("Você está na casa %d\n", casa);
 
                 printf("Vez do jogador %c\n\n", jogador);
-                
-                quadrante = determinarQuadrante(x, y);
-                printf("Você está no quadrante %d\n", quadrante);
 
-
-                int i = posicoes[quadrante-1][0];
-                int j = posicoes[quadrante-1][1];
+                int i = posicoes[casa-1][0];
+                int j = posicoes[casa-1][1];
 
                 if (leftButton && jogadaValida(tabuleiro, i, j)) {
                     tabuleiro[i][j] = jogador;
                     jogadas++;
                 }
+
+                // Verifica vitória ou empate
+                int vitoria = verificarVitoria(tabuleiro);
+                int empate = verificarEmpate(tabuleiro, &jogadas);
+
+                if (vitoria) {
+                    system("clear");
+                    imprimirTabuleiro(tabuleiro);
+                    printf("%c Ganhou!\n", jogador);
+                    controladorCliques = 0;
+                    
+                    
+                } else if (empate) {
+                    system("clear");
+                    imprimirTabuleiro(tabuleiro);
+                    printf("Empate!\n");
+                    controladorCliques = 0;
+                }
+
+                jogador = alternaJogadores(jogadas);
+                usleep(2000); // Espera 2 ms antes de verificar novamente o mouse
             }
-
-            limitarCursor(&x, &y);
-
-            int vitoria = verificarVitoria(tabuleiro);
-            int empate = verificarEmpate(tabuleiro, &jogadas);
-
-            if (vitoria) {
-                system("clear");
-                imprimirTabuleiro(tabuleiro);
-                printf("%c Ganhou!\n", jogador);
-                break;
-                
-            } else if (empate) {
-                system("clear");
-                imprimirTabuleiro(tabuleiro);
-                printf("Empate!\n");
-                break;
-            }
-
-            jogador = alternaJogadores(jogadas); 
-
-            usleep(2000); // Espera 20ms antes de verificar novamente o mouse
         }
     }
 

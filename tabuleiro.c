@@ -2,7 +2,7 @@
 #include <ctype.h>
 
 void imprimirTabuleiro(char tabuleiro[3][3]) {
-    printf("\n");
+    printf("===== JOGO DA VELHA =====\n\n");
     int i;
     for (i = 0; i < 3; i++) {
         printf(" %c | %c | %c ", tabuleiro[i][0], tabuleiro[i][1], tabuleiro[i][2]);
