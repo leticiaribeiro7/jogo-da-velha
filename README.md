@@ -70,6 +70,20 @@ sudo ./jogo.exe
 
 ## Funcionamento do Jogo
 
+Para possibilitar o funcionamento do jogo utilizando o mouse, foi utilizado o arquivo **/dev/input/mice** disponível em distribuições Linux. Esse arquivo trata-se de um driver que detecta os dados do mouse, como cliques dos botões e movimentação. Portanto, ao abrir este arquivo em modo leitura no código fonte foi possível criar uma lógica de verificação das coordenadas X e Y do mouse e limitando-as ao tamanho desejado.
+
+#### Coordenada X
+- Movimento para a esquerda: O valor de X diminui
+- Movimento para a direita: O valor de X aumenta
+
+#### Coordenada Y
+- Movimento para cima: O valor de Y diminui
+- Movimento para baixo: O valor de Y aumenta
+
+#### Casas do tabuleiro
+ --
+
+
 ## Cenários de Testes
 - vitoria
 - empate
