@@ -89,7 +89,7 @@ Em relação à mudança das coordenadas, o movimento funciona da seguinte forma
 
 #### Casas do tabuleiro
 As jogadas propriamente ditas são executadas através de uma lógica de "casas", o tabuleiro é subdividido em 9 espaços em que os jogadores podem escolher (caso o outro jogador não tenha jogado naquele espaço) e finalizar a jogada com um clique do mouse no botão esquerdo. A todo tempo durante a execução, é mostrado em qual casa o jogador se encontra, e vai mudando conforme o mouse é movimentado.
-
+Cada casa possui 50 unidades de tamanho, o valor foi decidido de acordo à sensibilidade envolvida na mudança de uma casa para outra.
 
 ## Cenários de Testes
 - vitoria
