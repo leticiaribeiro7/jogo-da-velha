@@ -85,7 +85,7 @@ int main() {
     while (executando) {
 
         KEY_read(&dataButton);
-
+//printf("%d", dataButton);
         // Se o botão KEY1 for pressionado, o jogo termina
         if (dataButton == 0b10) {
             printf("Saindo do jogo...");
@@ -96,10 +96,13 @@ int main() {
             controladorCliques = 1;
             imprimirTabuleiro(tabuleiro);
             printf("Jogadas: %d\n", jogadas);
-        }
-
+        }sleep(1);
+}
         while (controladorCliques) { // inicia a partida
+
+
             if (read(fd, &mouse_buffer, sizeof(mouse_buffer)) > 0) {
+		
                 system("clear");
                 imprimirTabuleiro(tabuleiro);
                 printf("Jogadas: %d\n\n", jogadas);
@@ -121,7 +124,7 @@ int main() {
                 int i = posicoes[casa-1][0];
                 int j = posicoes[casa-1][1];
 
-                if (leftButton && jogadaValida(tabuleiro, i, j)) {
+               if (leftButton && jogadaValida(tabuleiro, i, j)) {
                     tabuleiro[i][j] = jogador;
                     jogadas++;
                 }
@@ -134,19 +137,28 @@ int main() {
                     system("clear");
                     imprimirTabuleiro(tabuleiro);
                     printf("%c Ganhou!\n", jogador);
+dataButton = 0;   
+vitoria = 0;
+jogadas =0;
                     controladorCliques = 0;
                     
                     
                 } else if (empate) {
                     system("clear");
                     imprimirTabuleiro(tabuleiro);
+
                     printf("Empate!\n");
+dataButton = 0;
+empate = 0;
+   
+
                     controladorCliques = 0;
-                }
+              }
+
 
                 jogador = alternaJogadores(jogadas);
-                usleep(2000); // Espera 2 ms antes de verificar novamente o mouse
-            }
+              usleep(2000); // Espera 2 ms antes de verificar novamente o mouse
+           }
         }
     }
 
