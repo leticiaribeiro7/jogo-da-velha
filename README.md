@@ -46,7 +46,8 @@ A placa de desenvolvimento DE1-SoC é uma plataforma baseada no chip Altera Cycl
 A linguagem C é uma linguagem de programação de alto nível que foi criada nos anos 70 com o propósito inicial de desenvolver sistemas operacionais. Nos dias atuais, ela permanece bastante popular, sendo amplamente utilizada em sistemas embarcados, no Kernel do Linux, aleḿ de também ter servido de influência para criação de outras linguagens como C#, C++ e Java. No projeto, essa linguagem foi utilizada para desenvolver o código fonte em conjunto com o compilador GCC para execução do programa.
 
 ### Compilador GCC
---
+GCC é sigla para GNU Compiler Collection
+
 ### Editor de texto VSCode
 
 O Visual Studio Code é um editor de texto bastante popular que tem suporte para Windows, Linux e MacOS. Neste projeto, o VSCode foi utilizado para fins de edição do código em linguagem C, usufruindo do realce de sintaxe que o programa propociona.
@@ -57,7 +58,6 @@ Foi utilizado um mouse como dispositivo periférico que serve de entrada para o 
 
 
 ## Arquitetura da De1SoC
-
 
 
 ## Execução
@@ -71,7 +71,11 @@ sudo ./jogo.exe
 
 ## Funcionamento do Jogo
 
-Para possibilitar o funcionamento do jogo utilizando o mouse, foi utilizado o arquivo **/dev/input/mice** disponível em distribuições Linux. Esse arquivo trata-se de um driver que detecta os dados do mouse, como cliques dos botões e movimentação. Portanto, ao abrir este arquivo em modo leitura no código fonte foi possível criar uma lógica de verificação das coordenadas X e Y do mouse e limitando-as ao tamanho desejado.
+Para possibilitar o funcionamento do jogo utilizando o mouse, foi utilizado o arquivo **/dev/input/mice** disponível em distribuições Linux. Esse arquivo trata-se de um driver que detecta os dados do mouse, como cliques dos botões e movimentação. Portanto, ao abrir este arquivo em modo leitura no código fonte foi possível criar uma lógica de verificação das coordenadas X e Y do mouse e limitá-las ao tamanho desejado.
+Além disso, para início e finalização do jogo foi utilizado dois botões da placa de desenvolvimento, o KEY0 para início e o KEY1 para finalizar. Para implementar essa funcionalidade, foi utilizado o driver KEY disponível na DE1-SoC-UP, a distribuição Linux da placa. Este driver proporciona comunicação com os push buttons, possuindo função de leitura dos estados dos botões para identificar qual está pressionado no momento. A importação no código fonte é feita através dessa linha:
+```bash
+"include <intelfpgaup/KEY>"
+```
 
 #### Coordenada X
 - Movimento para a esquerda: O valor de X diminui
@@ -82,7 +86,7 @@ Para possibilitar o funcionamento do jogo utilizando o mouse, foi utilizado o ar
 - Movimento para baixo: O valor de Y aumenta
 
 #### Casas do tabuleiro
- --
+As jogadas propriamente ditas são executadas através de uma lógica de "casas", o tabuleiro é subdividido em 9 espaços em que os jogadores podem escolher (caso o outro jogador não tenha jogado naquele espaço) e finalizar a jogada com um clique do mouse no botão esquerdo. A todo tempo durante a execução, é mostrado em qual casa o jogador se encontra, e vai mudando conforme o mouse é movimentado.
 
 
 ## Cenários de Testes
