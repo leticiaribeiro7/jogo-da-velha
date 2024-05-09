@@ -87,8 +87,8 @@ Para possibilitar o funcionamento do jogo utilizando o mouse, foi utilizado o ar
 ## Cenários de Testes
 - vitoria
 - empate
-- quando clica numa casa
-- tentativa de marcar casa ocupada
+- iniciar jogo
+- sair do jogo
 
 
 ## Conclusão
