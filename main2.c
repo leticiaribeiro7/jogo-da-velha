@@ -55,7 +55,7 @@ int main() {
     int jogadas = 0;
     int dataButton = 0b0;
     int executando = 1; // Flag para executar o jogo
-    int controladorCliques = 1;
+    int controladorCliques = 0;
 
     fd = open(MOUSEFILE, O_RDONLY); // Abre arquivo do mouse
     KEY_open(); // Abre botões da placa
