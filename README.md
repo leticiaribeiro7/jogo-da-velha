@@ -77,6 +77,8 @@ Além disso, para início e finalização do jogo foi utilizado dois botões da 
 "include <intelfpgaup/KEY>"
 ```
 
+Em relação à mudança das coordenadas, o movimento funciona da seguinte forma:
+
 #### Coordenada X
 - Movimento para a esquerda: O valor de X diminui
 - Movimento para a direita: O valor de X aumenta
