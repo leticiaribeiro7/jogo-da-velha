@@ -1,6 +1,16 @@
 #include <stdio.h>
 #include <ctype.h>
 
+void menuInicializacaoJogo(int n){
+    
+    printf("###### Boas Vindas ao Jogo da Velha ######\n");
+    printf("Para iniciar o jogo pressione o botão KEY0\n");
+    printf("Para desistir da partida e reiniciar o jogo pressione o botão KEY1\n");
+    printf("Para encerrar o jogo de vez pressione o botão KEY2\n");
+    printf("Uma jogada só será válida se você escolher uma casa ocupada por números que vão de 1 a 9.\n");
+    printf("Bom jogo!\n");
+}
+
 void imprimirTabuleiro(char tabuleiro[3][3]) {
     printf("===== JOGO DA VELHA =====\n\n");
     int i;
@@ -15,8 +25,9 @@ void imprimirTabuleiro(char tabuleiro[3][3]) {
 
 void reinicializarTabuleiro(char tabuleiro[3][3]) {
     int num = 1;
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
+    int i, j;
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
             tabuleiro[i][j] = num + '0';
             num++;
         }
