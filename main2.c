@@ -53,7 +53,7 @@ int main() {
     int casa = 0;
     char jogador = ' ';
     int jogadas = 0;
-    int dataButton = 0b0;
+    int dataButton = 0;
     int executando = 1; // Flag para executar o jogo
     int controladorCliques = 0;
 
@@ -96,13 +96,26 @@ int main() {
             controladorCliques = 1;
             imprimirTabuleiro(tabuleiro);
             printf("Jogadas: %d\n", jogadas);
-        }sleep(1);
-}
+        }
+
         while (controladorCliques) { // inicia a partida
 
 
             if (read(fd, &mouse_buffer, sizeof(mouse_buffer)) > 0) {
-		
+                KEY_read(&dataButton);
+
+                if(dataButton == 0b10){
+                    printf("Desistindo da partida...");
+                    usleep(500000);
+                    system("clear");
+                    printf("Partida cancelada.");
+                    usleep(500000);
+                    reinicializarTabuleiro(tabuleiro);
+                    dataButton = 0;  
+                    jogadas = 0;
+                    controladorCliques = 0;
+                }
+
                 system("clear");
                 imprimirTabuleiro(tabuleiro);
                 printf("Jogadas: %d\n\n", jogadas);
@@ -137,29 +150,29 @@ int main() {
                     system("clear");
                     imprimirTabuleiro(tabuleiro);
                     printf("%c Ganhou!\n", jogador);
-dataButton = 0;   
-vitoria = 0;
-jogadas =0;
+                    imprimirTabuleiro(tabuleiro);
+                    dataButton = 0;   
+                    vitoria = 0;
+                    jogadas = 0;
                     controladorCliques = 0;
                     
                     
                 } else if (empate) {
                     system("clear");
                     imprimirTabuleiro(tabuleiro);
-
                     printf("Empate!\n");
-dataButton = 0;
-empate = 0;
-   
-
+                    imprimirTabuleiro(tabuleiro);
+                    dataButton = 0;
+                    empate = 0;
+                    jogadas = 0;
                     controladorCliques = 0;
               }
-
 
                 jogador = alternaJogadores(jogadas);
               usleep(2000); // Espera 2 ms antes de verificar novamente o mouse
            }
         }
+        sleep(1);
     }
 
     KEY_close();
