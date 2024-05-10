@@ -1,6 +1,6 @@
 CC = gcc
-TARGET = jogo.exe
-SOURCES = main.c tabuleiro.c
+TARGET = jogoExe
+SOURCES = main2.c tabuleiro.c
 
 all: $(TARGET)
 
