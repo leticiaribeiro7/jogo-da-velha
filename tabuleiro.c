@@ -13,6 +13,16 @@ void imprimirTabuleiro(char tabuleiro[3][3]) {
     printf("\n\n");
 }
 
+void reinicializarTabuleiro(char tabuleiro[3][3]) {
+    int num = 1;
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            tabuleiro[i][j] = num + '0';
+            num++;
+        }
+    }
+}
+
 /**
  * Função para verificar se todos os elementos da diagonal principal são iguais.
  * 
