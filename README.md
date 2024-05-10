@@ -61,6 +61,8 @@ O Visual Studio Code é um editor de texto bastante popular que tem suporte para
 
 Foi utilizado um mouse como dispositivo periférico que serve de entrada para o jogador selecionar a posição no tabuleiro do jogo e realizar a jogada. Para tal, o mouse é conectado na [DE1-SoC](#kit-de-desenvolvimento-de1-soc) através de uma de suas entradas USB.  (add foto da placa com mouse)
 
+### Push Buttons
+
 
 ## Arquitetura da De1SoC
 
