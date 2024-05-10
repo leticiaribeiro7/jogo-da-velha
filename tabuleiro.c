@@ -3,11 +3,11 @@
 
 void menuInicializacaoJogo(int n){
     
-    printf("###### Boas Vindas ao Jogo da Velha ######\n");
-    printf("Para iniciar o jogo pressione o botão KEY0\n");
-    printf("Para desistir da partida e reiniciar o jogo pressione o botão KEY1\n");
-    printf("Para encerrar o jogo de vez pressione o botão KEY2\n");
-    printf("Uma jogada só será válida se você escolher uma casa ocupada por números que vão de 1 a 9.\n");
+    printf("###### Boas Vindas ao Jogo da Velha ######\n\n");
+    printf("1. Para iniciar o jogo pressione o botão KEY0\n");
+    printf("2. Para desistir da partida ou reiniciar o jogo pressione o botão KEY1\n");
+    printf("3. Para encerrar o jogo de vez pressione o botão KEY2\n");
+    printf("4. Uma jogada só será válida se você escolher uma casa ocupada por números que vão de 1 a 9.\n\n");
     printf("Bom jogo!\n");
 }
 
