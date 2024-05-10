@@ -9,6 +9,8 @@
     - [Compilador GCC](#compilador-gcc)
     - [Editor de texto VSCode](#editor-de-texto-vscode)
     - [Mouse](#mouse)
+    - [Push Buttons](#push-buttons)
+
 - [Arquitetura da DE1 SoC](#arquitetura-da-de1soc)
 - [Execução](#execução)
 - [Lógica do Jogo](#lógica-do-jogo)
