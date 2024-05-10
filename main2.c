@@ -99,9 +99,12 @@ int main() {
             break;
         } // Se o botão KEY0 é pressionado, o jogo inicia.
         else if (dataButton == 0b001) {
+						reinicializarTabuleiro(tabuleiro);
             controladorCliques = 1;
             imprimirTabuleiro(tabuleiro);
             printf("Jogadas: %d\n", jogadas);
+						printf("Você está na casa %d\n", casa);
+            printf("Vez do jogador %c\n\n", jogador);
         }
 
         while (controladorCliques) { // inicia a partida
@@ -150,21 +153,34 @@ int main() {
                 int empate = verificarEmpate(tabuleiro, &jogadas);
 
                 if (vitoria) {
+					int i = 5;
                     system("clear");
-                    imprimirTabuleiro(tabuleiro);
-                    printf("%c Ganhou!\n", jogador);
-                    imprimirTabuleiro(tabuleiro);
+                    for (i; i > 0; i--) {
+						imprimirTabuleiro(tabuleiro);
+                    	printf("%c Ganhou!\n", jogador);
+                        printf("Voltando para o menu em %d...\n", i);
+                        sleep(1);
+                        system("clear");
+                    }
                     dataButton = 0;   
                     vitoria = 0;
                     jogadas = 0;
                     controladorCliques = 0;
                     
-                    
                 } else if (empate) {
+					int i = 5;
                     system("clear");
                     imprimirTabuleiro(tabuleiro);
                     printf("Empate!\n");
-                    imprimirTabuleiro(tabuleiro);
+                    
+                    for (i; i > 0; i--) {
+						imprimirTabuleiro(tabuleiro);
+                    	printf("Empate!\n");
+                        printf("Voltando para o menu em %d...\n", i);
+                        sleep(1);
+                        system("clear");
+                    }
+                    
                     dataButton = 0;
                     empate = 0;
                     jogadas = 0;
@@ -172,7 +188,7 @@ int main() {
               }
 
                 jogador = alternaJogadores(jogadas);
-              usleep(2000); // Espera 2 ms antes de verificar novamente o mouse
+              	usleep(2000); // Espera 2 ms antes de verificar novamente o mouse
            }
         }
        
