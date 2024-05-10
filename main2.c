@@ -57,6 +57,7 @@ int main() {
     int executando = 1; // Flag para executar o jogo
     int controladorCliques = 0;
 
+
     fd = open(MOUSEFILE, O_RDONLY); // Abre arquivo do mouse
     KEY_open(); // Abre botões da placa
 
@@ -80,46 +81,48 @@ int main() {
 
 
     
-    printf("Clique no botão KEY0 para iniciar a partida\n");
+    
 
     while (executando) {
-
+        
         KEY_read(&dataButton);
-//printf("%d", dataButton);
-        // Se o botão KEY1 for pressionado, o jogo termina
-        if (dataButton == 0b10) {
-            printf("Saindo do jogo...");
+       
+        menuInicializacaoJogo();
+        usleep(500000);
+        system("clear");
+       
+
+        // Se o botão KEY2 for pressionado, o jogo é finalizado e encerra a execução no terminal
+        if (dataButton == 0b100) {
+            printf("Saindo do jogo...\n");
             dataButton = 0;
             break;
-        } // Se o botão KEY0 é pressionado, o jogo inicia
-        else if (dataButton == 0b01) {
+        } // Se o botão KEY0 é pressionado, o jogo inicia.
+        else if (dataButton == 0b001) {
             controladorCliques = 1;
             imprimirTabuleiro(tabuleiro);
             printf("Jogadas: %d\n", jogadas);
         }
 
         while (controladorCliques) { // inicia a partida
+            // Se o botão KEY1 for pressionado, a partida atual é encerrada e o menu é exibido.
+            if(dataButton == 0b010){
+                printf("Desistindo da partida...\n");
+                sleep(2);
+                system("clear");
+                printf("Partida cancelada.\n");
+                sleep(2);
+                reinicializarTabuleiro(tabuleiro);
+                dataButton = 0;  
+                jogadas = 0;
+                controladorCliques = 0;
+            }
 
-
-            if (read(fd, &mouse_buffer, sizeof(mouse_buffer)) > 0) {
+            if (read(fd, &mouse_buffer, sizeof(mouse_buffer)) > 0 && (controladorCliques)) {
                 KEY_read(&dataButton);
-
-                if(dataButton == 0b10){
-                    printf("Desistindo da partida...");
-                    usleep(500000);
-                    system("clear");
-                    printf("Partida cancelada.");
-                    usleep(500000);
-                    reinicializarTabuleiro(tabuleiro);
-                    dataButton = 0;  
-                    jogadas = 0;
-                    controladorCliques = 0;
-                }
-
                 system("clear");
                 imprimirTabuleiro(tabuleiro);
                 printf("Jogadas: %d\n\n", jogadas);
-
                 x_disp = mouse_buffer[1];
                 y_disp = mouse_buffer[2];
                 leftButton = mouse_buffer[0] & 0x1;
@@ -172,7 +175,7 @@ int main() {
               usleep(2000); // Espera 2 ms antes de verificar novamente o mouse
            }
         }
-        sleep(1);
+       
     }
 
     KEY_close();
