@@ -51,7 +51,7 @@ int main() {
     int x = 0, y = 0;
     char mouse_buffer[3];
     int casa = 0;
-    char jogador = ' ';
+    char jogador = 'X';
     int jogadas = 0;
     int dataButton = 0;
     int executando = 1; // Flag para executar o jogo
@@ -102,7 +102,7 @@ int main() {
 						reinicializarTabuleiro(tabuleiro);
             controladorCliques = 1;
             imprimirTabuleiro(tabuleiro);
-            printf("Jogadas: %d\n", jogadas);
+            printf("Jogadas: %d\n\n", jogadas);
 						printf("Você está na casa %d\n", casa);
             printf("Vez do jogador %c\n\n", jogador);
         }
@@ -153,10 +153,10 @@ int main() {
                 int empate = verificarEmpate(tabuleiro, &jogadas);
 
                 if (vitoria) {
-					int i = 5;
+		    int i = 5;
                     system("clear");
                     for (i; i > 0; i--) {
-						imprimirTabuleiro(tabuleiro);
+			imprimirTabuleiro(tabuleiro);
                     	printf("%c Ganhou!\n", jogador);
                         printf("Voltando para o menu em %d...\n", i);
                         sleep(1);
@@ -168,13 +168,13 @@ int main() {
                     controladorCliques = 0;
                     
                 } else if (empate) {
-					int i = 5;
+		    int i = 5;
                     system("clear");
                     imprimirTabuleiro(tabuleiro);
                     printf("Empate!\n");
                     
                     for (i; i > 0; i--) {
-						imprimirTabuleiro(tabuleiro);
+			imprimirTabuleiro(tabuleiro);
                     	printf("Empate!\n");
                         printf("Voltando para o menu em %d...\n", i);
                         sleep(1);
