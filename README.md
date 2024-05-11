@@ -84,7 +84,7 @@ No projeto em questão, os botões foram utilizados para iniciar e encerrar um j
 
 Para manipular e captar os dados dos botões, foi utilizado o driver KEY disponível na DE1-SoC-UP, a distribuição Linux da placa. Isso proporciona uma maneira eficaz de integrar a funcionalidade dos botões ao sistema, garantindo uma interação fluida e eficiente.
 
-## Arquitetura da De1SoC
+## Arquitetura da DE1-SoC
 
 
 ## Execução
