@@ -51,7 +51,7 @@ A placa DE1-Soc possui 4 botões para interação denominados, KEY0, KEY1, KEY2 
 </p>
 
 <p align="center">
-    <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/perifericos_placa.png" alt="Periféricos Utilizados" width="400">
+    <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/perifericos_placa.png" alt="Periféricos Utilizados" width="500">
     <br>
     Figura 2. Periféricos da DE1-SoC utilizados.
 </p>
