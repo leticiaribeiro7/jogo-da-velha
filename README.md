@@ -43,6 +43,20 @@ A placa de desenvolvimento DE1-SoC é uma plataforma baseada no chip Altera Cycl
     Figura 1. Esta é a placa de desenvolvimento DE1-SoC.
 </p>
 
+<p align="justify">
+Os periféricos utilizados na construção do projeto com a DE1-SoC incluíram entradas USB e botões (Figura 2). A placa possui 2 portas USB 2.0 tipo A, cada uma equipada com um controlador SMSC USB3300 e um controlador de hub de 2 portas. O dispositivo USB3300, alojado em um pacote QFN de 32 pinos, é conectado ao controlador de hub SMSC USB2512B e suporta a interface UTMI+ Low Pin Interface (ULPI), permitinfo a comunicação com o controlador USB 2.0 no HPS.
+</p>
+<p align="justify">
+A placa DE1-Soc possui 4 botões para interação denominados, KEY0, KEY1, KEY2 e KEY3. Ao pressionar um botão específico, o seu estado é registrado em um registrador de dados, onde o bit correspondente é ativado para 1, caso contrário, é definido como 0.
+</p>
+
+<p align="center">
+    <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/perifericos_placa.png" alt="Periféricos Utilizados" width="400">
+    <br>
+    Figura 2. Periféricos da DE1-SoC utilizados.
+</p>
+
+
 
 ### Linguagem C
 
@@ -54,12 +68,14 @@ A linguagem C é uma linguagem de programação de alto nível que foi criada no
 GCC é sigla para GNU Compiler Collection
 
 ### Editor de texto VSCode
-
+<p align="justify">
 O Visual Studio Code é um editor de texto bastante popular que tem suporte para Windows, Linux e MacOS. Neste projeto, o VSCode foi utilizado para fins de edição do código em linguagem C, usufruindo do realce de sintaxe que o programa propociona.
+</p>
 
 ### Mouse
-
+<p align="justify">
 Foi utilizado um mouse como dispositivo periférico que serve de entrada para o jogador selecionar a posição no tabuleiro do jogo e realizar a jogada. Para tal, o mouse é conectado na [DE1-SoC](#kit-de-desenvolvimento-de1-soc) através de uma de suas entradas USB.  (add foto da placa com mouse)
+</p>
 
 ### Push Buttons
 Os push buttons, também conhecidos como botões de pressão, são dispositivos de entrada que permitem aos usuários interagir com sistemas eletrônicos ou dispositivos por meio de pressão física. Sua escolha se justifica pela capacidade de fornecer uma interface física intuitiva, facilitando a interação dos usuários com dispositivos eletrônicos. Isso permite operações simples e diretas, melhorando a experiência do usuário.
@@ -112,3 +128,6 @@ Cada casa possui 50 unidades de tamanho, o valor foi decidido de acordo à sensi
 ## Conclusão
 
 ## Referências
+
+
+
