@@ -56,7 +56,17 @@ A placa DE1-Soc possui 4 botões para interação denominados, KEY0, KEY1, KEY2 
     Figura 2. Periféricos da DE1-SoC utilizados.
 </p>
 
+### Mouse
+<p align="justify">
+Foi utilizado um mouse como dispositivo periférico que serve de entrada para o jogador selecionar a posição no tabuleiro do jogo e realizar a jogada. Para tal, o mouse é conectado na [DE1-SoC](#kit-de-desenvolvimento-de1-soc) através de uma de suas entradas USB.  (add foto da placa com mouse)
+</p>
 
+### Push Buttons
+Os push buttons, também conhecidos como botões de pressão, são dispositivos de entrada que permitem aos usuários interagir com sistemas eletrônicos ou dispositivos por meio de pressão física. Sua escolha se justifica pela capacidade de fornecer uma interface física intuitiva, facilitando a interação dos usuários com dispositivos eletrônicos. Isso permite operações simples e diretas, melhorando a experiência do usuário.
+
+No projeto em questão, os botões foram utilizados para iniciar e encerrar um jogo. O botão KEY0 é responsável por iniciar o jogo quando pressionado, enquanto o botão KEY1 encerra o jogo quando pressionado.
+
+Para manipular e captar os dados dos botões, foi utilizado o driver KEY disponível na DE1-SoC-UP, a distribuição Linux da placa. Isso proporciona uma maneira eficaz de integrar a funcionalidade dos botões ao sistema, garantindo uma interação fluida e eficiente.
 
 ### Linguagem C
 
@@ -71,18 +81,6 @@ GCC é sigla para GNU Compiler Collection
 <p align="justify">
 O Visual Studio Code é um editor de texto bastante popular que tem suporte para Windows, Linux e MacOS. Neste projeto, o VSCode foi utilizado para fins de edição do código em linguagem C, usufruindo do realce de sintaxe que o programa propociona.
 </p>
-
-### Mouse
-<p align="justify">
-Foi utilizado um mouse como dispositivo periférico que serve de entrada para o jogador selecionar a posição no tabuleiro do jogo e realizar a jogada. Para tal, o mouse é conectado na [DE1-SoC](#kit-de-desenvolvimento-de1-soc) através de uma de suas entradas USB.  (add foto da placa com mouse)
-</p>
-
-### Push Buttons
-Os push buttons, também conhecidos como botões de pressão, são dispositivos de entrada que permitem aos usuários interagir com sistemas eletrônicos ou dispositivos por meio de pressão física. Sua escolha se justifica pela capacidade de fornecer uma interface física intuitiva, facilitando a interação dos usuários com dispositivos eletrônicos. Isso permite operações simples e diretas, melhorando a experiência do usuário.
-
-No projeto em questão, os botões foram utilizados para iniciar e encerrar um jogo. O botão KEY0 é responsável por iniciar o jogo quando pressionado, enquanto o botão KEY1 encerra o jogo quando pressionado.
-
-Para manipular e captar os dados dos botões, foi utilizado o driver KEY disponível na DE1-SoC-UP, a distribuição Linux da placa. Isso proporciona uma maneira eficaz de integrar a funcionalidade dos botões ao sistema, garantindo uma interação fluida e eficiente.
 
 ## Arquitetura da DE1-SoC
 
