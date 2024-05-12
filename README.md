@@ -44,7 +44,7 @@ A placa de desenvolvimento DE1-SoC é uma plataforma baseada no chip Altera Cycl
 </p>
 
 <p align="justify">
-Os periféricos utilizados na construção do projeto com a DE1-SoC incluíram entradas USB e botões (Figura 2). A placa possui 2 portas USB 2.0 tipo A, cada uma equipada com um controlador SMSC USB3300 e um controlador de hub de 2 portas. O dispositivo USB3300, alojado em um pacote QFN de 32 pinos, é conectado ao controlador de hub SMSC USB2512B e suporta a interface UTMI+ Low Pin Interface (ULPI), permitinfo a comunicação com o controlador USB 2.0 no HPS.
+Os periféricos utilizados na construção do projeto com a DE1-SoC incluíram entradas USB e botões (Figura 2). A placa possui 2 portas USB 2.0 tipo A, cada uma equipada com um controlador SMSC USB3300 e um controlador de hub de 2 portas. O dispositivo USB3300, alojado em um pacote QFN de 32 pinos, é conectado ao controlador de hub SMSC USB2512B e suporta a interface UTMI+ Low Pin Interface (ULPI), permitindo a comunicação com o controlador USB 2.0 no HPS.
 </p>
 <p align="justify">
 A placa DE1-Soc possui 4 botões para interação denominados, KEY0, KEY1, KEY2 e KEY3. Ao pressionar um botão específico, o seu estado é registrado em um registrador de dados, onde o bit correspondente é ativado para 1, caso contrário, é definido como 0.
