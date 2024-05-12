@@ -55,7 +55,7 @@ Os periféricos utilizados na construção do projeto com a DE1-SoC incluíram e
 
 ### Mouse
 <p align="justify">
-Foi utilizado um mouse como dispositivo periférico que serve de entrada para o jogador selecionar a posição no tabuleiro do jogo e realizar a jogada. Para tal, o mouse é conectado na [DE1-SoC](#kit-de-desenvolvimento-de1-soc) através de uma de suas entradas USB.  (add foto da placa com mouse)
+Foi utilizado um mouse como dispositivo periférico que serve de entrada para o jogador selecionar a posição no tabuleiro do jogo e realizar a jogada. Para tal, o mouse é conectado através de uma de suas entradas USB. (ADD FOTO DO MOUSE CONECTADO A PLACA)
 </p>
 
 ### Push Buttons
