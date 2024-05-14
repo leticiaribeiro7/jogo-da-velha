@@ -119,11 +119,11 @@ Cada casa possui 50 unidades de tamanho, o valor foi decidido de acordo à sensi
 Os seguintes casos de teste demonstram as possibilidades que podem acontecer durante o jogo:
 - Vitória
 
-<img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/vitoria.png" alt="Vitoria" width="600">
+<img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/vitoria.png" alt="Vitoria" width="300">
 
 - Empate
 
-<img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/vitoria.png" alt="Empate" width="600">
+<img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/empate.png" alt="Empate" width="300">
 
 - iniciar jogo
 - sair do jogo
