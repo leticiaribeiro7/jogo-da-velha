@@ -51,11 +51,12 @@ int main() {
     int x = 0, y = 0;
     char mouse_buffer[3];
     int casa = 0;
-    char jogador = ' ';
+    char jogador = 'X';
     int jogadas = 0;
-    int dataButton = 0b0;
+    int dataButton = 0;
     int executando = 1; // Flag para executar o jogo
-    int controladorCliques = 1;
+    int controladorCliques = 0;
+
 
     fd = open(MOUSEFILE, O_RDONLY); // Abre arquivo do mouse
     KEY_open(); // Abre botões da placa
@@ -80,30 +81,51 @@ int main() {
 
 
     
-    printf("Clique no botão KEY0 para iniciar a partida\n");
+    
 
     while (executando) {
-
+        
         KEY_read(&dataButton);
+       
+        menuInicializacaoJogo();
+        usleep(500000);
+        system("clear");
+       
 
-        // Se o botão KEY1 for pressionado, o jogo termina
-        if (dataButton == 0b10) {
-            printf("Saindo do jogo...");
+        // Se o botão KEY2 for pressionado, o jogo é finalizado e encerra a execução no terminal
+        if (dataButton == 0b100) {
+            printf("Saindo do jogo...\n");
             dataButton = 0;
             break;
-        } // Se o botão KEY0 é pressionado, o jogo inicia
-        else if (dataButton == 0b01) {
+        } // Se o botão KEY0 é pressionado, o jogo inicia.
+        else if (dataButton == 0b001) {
+			reinicializarTabuleiro(tabuleiro);
             controladorCliques = 1;
             imprimirTabuleiro(tabuleiro);
-            printf("Jogadas: %d\n", jogadas);
+            printf("Jogadas: %d\n\n", jogadas);
+			printf("Você está na casa %d\n", casa);
+            printf("Vez do jogador %c\n\n", jogador);
         }
 
         while (controladorCliques) { // inicia a partida
-            if (read(fd, &mouse_buffer, sizeof(mouse_buffer)) > 0) {
+            // Se o botão KEY1 for pressionado, a partida atual é encerrada e o menu é exibido.
+            if(dataButton == 0b010){
+                printf("Desistindo da partida...\n");
+                sleep(2);
+                system("clear");
+                printf("Partida cancelada.\n");
+                sleep(2);
+                reinicializarTabuleiro(tabuleiro);
+                dataButton = 0;  
+                jogadas = 0;
+                controladorCliques = 0;
+            }
+
+            if (read(fd, &mouse_buffer, sizeof(mouse_buffer)) > 0 && (controladorCliques)) {
+                KEY_read(&dataButton);
                 system("clear");
                 imprimirTabuleiro(tabuleiro);
                 printf("Jogadas: %d\n\n", jogadas);
-
                 x_disp = mouse_buffer[1];
                 y_disp = mouse_buffer[2];
                 leftButton = mouse_buffer[0] & 0x1;
@@ -131,23 +153,45 @@ int main() {
                 int empate = verificarEmpate(tabuleiro, &jogadas);
 
                 if (vitoria) {
+		            int i = 5;
                     system("clear");
-                    imprimirTabuleiro(tabuleiro);
-                    printf("%c Ganhou!\n", jogador);
+                    for (i; i > 0; i--) {
+			            imprimirTabuleiro(tabuleiro);
+                    	printf("%c Ganhou!\n", jogador);
+                        printf("Voltando para o menu em %d...\n", i);
+                        sleep(1);
+                        system("clear");
+                    }
+                    dataButton = 0;   
+                    vitoria = 0;
+                    jogadas = 0;
                     controladorCliques = 0;
                     
-                    
                 } else if (empate) {
+		            int i = 5;
                     system("clear");
                     imprimirTabuleiro(tabuleiro);
                     printf("Empate!\n");
+                    
+                    for (i; i > 0; i--) {
+			            imprimirTabuleiro(tabuleiro);
+                    	printf("Empate!\n");
+                        printf("Voltando para o menu em %d...\n", i);
+                        sleep(1);
+                        system("clear");
+                    }
+                    
+                    dataButton = 0;
+                    empate = 0;
+                    jogadas = 0;
                     controladorCliques = 0;
-                }
+              }
 
                 jogador = alternaJogadores(jogadas);
-                usleep(2000); // Espera 2 ms antes de verificar novamente o mouse
+              	usleep(2000); // Espera 2 ms antes de verificar novamente o mouse
             }
         }
+       
     }
 
     KEY_close();

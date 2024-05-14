@@ -61,7 +61,8 @@ Foi utilizado um mouse como dispositivo periférico que serve de entrada para o 
 ### Push Buttons
 Os push buttons, também conhecidos como botões de pressão, são dispositivos de entrada que permitem aos usuários interagir com sistemas eletrônicos ou dispositivos por meio de pressão física. Sua escolha se justifica pela capacidade de fornecer uma interface física intuitiva, facilitando a interação dos usuários com dispositivos eletrônicos. Isso permite operações simples e diretas, melhorando a experiência do usuário.
 
-No projeto em questão, os botões foram utilizados para iniciar e encerrar um jogo. O botão KEY0 é responsável por iniciar o jogo quando pressionado, enquanto o botão KEY1 encerra o jogo quando pressionado.
+No projeto em questão, os botões foram utilizados para iniciar, encerrar partida e encerrar um jogo. 
+O botão KEY0 é responsável por iniciar o jogo quando pressionado, enquanto o botão KEY1 encerra a partida atual caso esteja em uma, e KEY2 encerra o jogo quando pressionado.
 
 Para manipular e captar os dados dos botões, foi utilizado o driver KEY disponível na DE1-SoC-UP, a distribuição Linux da placa. Isso proporciona uma maneira eficaz de integrar a funcionalidade dos botões ao sistema, garantindo uma interação fluida e eficiente.
 
@@ -72,7 +73,7 @@ A linguagem C é uma linguagem de programação de alto nível que foi criada no
 </p>
 
 ### Compilador GCC
-GCC é sigla para GNU Compiler Collection
+GCC é sigla para GNU Compiler Collection, trata-se de um conjunto de compiladores para linguagem de programação C, C++, Objective-C, Fortran, Ada, Go, entre outras. Lançado em 1987, é o compilador padrão na maior parte das distribuições Linux além de estar disponível para muitos sistemas embarcados, incluindo chips baseados em ARM e Power ISA. No projeto, foi utilizado para compilar o código fonte escrito em linguagem C.
 
 ### Editor de texto VSCode
 <p align="justify">
@@ -114,8 +115,16 @@ As jogadas propriamente ditas são executadas através de uma lógica de "casas"
 Cada casa possui 50 unidades de tamanho, o valor foi decidido de acordo à sensibilidade envolvida na mudança de uma casa para outra.
 
 ## Cenários de Testes
-- vitoria
-- empate
+
+Os seguintes casos de teste demonstram as possibilidades que podem acontecer durante o jogo:
+- Vitória
+
+<img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/vitoria.png" alt="Vitoria" width="600">
+
+- Empate
+
+<img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/vitoria.png" alt="Empate" width="600">
+
 - iniciar jogo
 - sair do jogo
 
