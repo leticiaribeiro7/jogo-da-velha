@@ -123,6 +123,14 @@ Em relação à mudança das coordenadas, o movimento funciona da seguinte forma
 As jogadas propriamente ditas são executadas através de uma lógica de "casas", o tabuleiro é subdividido em 9 espaços em que os jogadores podem escolher (caso o outro jogador não tenha jogado naquele espaço) e finalizar a jogada com um clique do mouse no botão esquerdo. A todo tempo durante a execução, é mostrado em qual casa o jogador se encontra, e vai mudando conforme o mouse é movimentado.
 Cada casa possui 50 unidades de tamanho, o valor foi decidido de acordo à sensibilidade envolvida na mudança de uma casa para outra.
 
+<p align="center">
+    <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/tabuleiro.png" alt="Botões da placa" width="500">
+    <br>
+     Representação da subdivisão do tabuleiro
+</p>
+
+
+
 ## Cenários de Testes
 
 Os seguintes casos de teste demonstram as possibilidades que podem acontecer durante o jogo:
