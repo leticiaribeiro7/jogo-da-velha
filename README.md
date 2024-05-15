@@ -1,6 +1,12 @@
 # Jogo da Velha
 
 ## Sobre
+O nosso projeto consistiu em desenvolver um jogo da velha na placa DE1-SoC, aproveitando os recursos disponíveis para criar uma experiência de jogabilidade imersiva. Para isso, optamos por uma interface em modo texto, que possibilita a apresentação clara e compreensível do tabuleiro do jogo e das interações dos jogadores.
+
+Um dos pontos-chave do nosso projeto foi a integração de um mouse, permitindo que os jogadores interajam de forma precisa e direta com o jogo. Conectar o mouse à porta USB da placa oferece uma seleção intuitiva das posições no tabuleiro, garantindo uma experiência de jogo fluida e gratificante.
+
+Além disso, para complementar a experiência, utilizamos os botões da placa para funções específicas do jogo. Esses botões foram usados para iniciar, pausar e reiniciar o jogo de maneira simples e eficiente, proporcionando uma jogabilidade intuitiva.
+
 
 ## Sumário
 - [Softwares e Periféricos Utilizados](#softwares-e-periféricos-utilizados)
