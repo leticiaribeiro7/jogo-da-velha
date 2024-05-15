@@ -55,7 +55,11 @@ Os periféricos utilizados na construção do projeto com a DE1-SoC incluíram e
 
 ### Mouse
 <p align="justify">
-Foi utilizado um mouse como dispositivo periférico que serve de entrada para o jogador selecionar a posição no tabuleiro do jogo e realizar a jogada. Para tal, o mouse é conectado através de uma de suas entradas USB. (ADD FOTO DO MOUSE CONECTADO A PLACA)
+Foi utilizado um mouse como dispositivo periférico que serve de entrada para o jogador selecionar a posição no tabuleiro do jogo e realizar a jogada. Para tal, o mouse é conectado através de uma de suas entradas USB. <p align="center">
+    <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/mouse conectado na placa.jpg" alt="Mouse conectado na placa" width="500">
+    <br>
+    Figura 3. Esta é a placa de desenvolvimento DE1-SoC conectada ao mouse.
+</p>
 </p>
 
 ### Push Buttons
@@ -66,8 +70,13 @@ O botão KEY0 é responsável por iniciar o jogo quando pressionado, enquanto o 
 
 Para manipular e captar os dados dos botões, foi utilizado o driver KEY disponível na DE1-SoC-UP, a distribuição Linux da placa. Isso proporciona uma maneira eficaz de integrar a funcionalidade dos botões ao sistema, garantindo uma interação fluida e eficiente.
 
-### Linguagem C
+<p align="center">
+    <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/botões da placa.jpg" alt="Botões da placa" width="500">
+    <br>
+    Figura 4. Push Buttons utilizados no projeto.
+</p>
 
+### Linguagem C
 <p align="justify">
 A linguagem C é uma linguagem de programação de alto nível que foi criada nos anos 70 com o propósito inicial de desenvolver sistemas operacionais. Nos dias atuais, ela permanece bastante popular, sendo amplamente utilizada em sistemas embarcados, no Kernel do Linux, aleḿ de também ter servido de influência para criação de outras linguagens como C#, C++ e Java. No projeto, essa linguagem foi utilizada para desenvolver o código fonte em conjunto com o compilador GCC para execução do programa.
 </p>
