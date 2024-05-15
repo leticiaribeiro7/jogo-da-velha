@@ -126,7 +126,7 @@ Cada casa possui 50 unidades de tamanho, o valor foi decidido de acordo à sensi
 <p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/tabuleiro.png" alt="Botões da placa" width="300">
     <br>
-     Representação da subdivisão do tabuleiro
+     Figura 5. Representação da subdivisão do tabuleiro
 </p>
 
 
