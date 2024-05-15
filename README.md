@@ -55,7 +55,11 @@ Os periféricos utilizados na construção do projeto com a DE1-SoC incluíram e
 
 ### Mouse
 <p align="justify">
-Foi utilizado um mouse como dispositivo periférico que serve de entrada para o jogador selecionar a posição no tabuleiro do jogo e realizar a jogada. Para tal, o mouse é conectado através de uma de suas entradas USB. (ADD FOTO DO MOUSE CONECTADO A PLACA)
+Foi utilizado um mouse como dispositivo periférico que serve de entrada para o jogador selecionar a posição no tabuleiro do jogo e realizar a jogada. Para tal, o mouse é conectado através de uma de suas entradas USB. <p align="center">
+    <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/mouse conectado na placa.jpg" alt="Mouse conectado na placa" width="500">
+    <br>
+    Figura 3. Esta é a placa de desenvolvimento DE1-SoC conectada ao mouse.
+</p>
 </p>
 
 ### Push Buttons
