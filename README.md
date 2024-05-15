@@ -75,8 +75,8 @@ Para manipular e captar os dados dos botões, foi utilizado o driver KEY dispon�
     <br>
     Figura 4. Push Buttons utilizados no projeto.
 </p>
-### Linguagem C
 
+### Linguagem C
 <p align="justify">
 A linguagem C é uma linguagem de programação de alto nível que foi criada nos anos 70 com o propósito inicial de desenvolver sistemas operacionais. Nos dias atuais, ela permanece bastante popular, sendo amplamente utilizada em sistemas embarcados, no Kernel do Linux, aleḿ de também ter servido de influência para criação de outras linguagens como C#, C++ e Java. No projeto, essa linguagem foi utilizada para desenvolver o código fonte em conjunto com o compilador GCC para execução do programa.
 </p>
