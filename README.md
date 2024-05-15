@@ -124,7 +124,7 @@ As jogadas propriamente ditas são executadas através de uma lógica de "casas"
 Cada casa possui 50 unidades de tamanho, o valor foi decidido de acordo à sensibilidade envolvida na mudança de uma casa para outra.
 
 <p align="center">
-    <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/tabuleiro.png" alt="Botões da placa" width="500">
+    <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/tabuleiro.png" alt="Botões da placa" width="300">
     <br>
      Representação da subdivisão do tabuleiro
 </p>
