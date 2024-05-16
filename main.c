@@ -196,7 +196,7 @@ int main() {
        
     }
 
-    KEY_close();
+    KEY_close(); // fecha os botões da placa
     close(fd);
     return 0;
 }
