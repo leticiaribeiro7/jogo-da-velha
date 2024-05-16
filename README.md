@@ -178,7 +178,7 @@ Cada casa possui 50 unidades de tamanho, o valor foi decidido de acordo à sensi
 <p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/tabuleiro.png" alt="Botões da placa" width="300">
     <br>
-     Figura 5. Representação da subdivisão do tabuleiro
+     Figura 6. Representação da subdivisão do tabuleiro
 </p>
 
 
@@ -190,36 +190,36 @@ Os seguintes casos de teste demonstram as possibilidades que podem acontecer dur
 </p>
 - Vitória
 <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/vitoria.png" alt="Vitoria" width="300">
-Figura 6. Cenário de teste onde ocorreu vitória
+Figura 7. Cenário de teste onde ocorreu vitória
 </p>
 
 </p>
 - Empate
 <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/empate.png" alt="Empate" width="300">
-Figura 7. Cenário de teste onde ocorreu empate
+Figura 8. Cenário de teste onde ocorreu empate
 </p>
 
 </p>
 - Iniciar jogo
 <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/menu inicio.png" alt="menu inicio" width="600">
-Figura 8. Cenário de teste para escolher alguma opção do menu
+Figura 9. Cenário de teste para escolher alguma opção do menu
 </p>
 
 </p>
 - Desistir da partida atual
 <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/desistindo da partida.png" alt="desistindo da partida" width="300">
-Figura 9. Cenário de teste desistindo da partida
+Figura 10. Cenário de teste desistindo da partida
 </p>
 
 </p>
 <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/partida cancelada.png" alt="partida cancelada" width="300">
-Figura 10. Cenário de teste confirma que a partida foi cancelada
+Figura 11. Cenário de teste confirma que a partida foi cancelada
 </p>
 
 </p>
 - Sair do jogo
 <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/saindo do jogo.png" alt="saindo do jogo" width="300">
-Figura 11. Cenário de teste encerrando e saindo do jogo
+Figura 12. Cenário de teste encerrando e saindo do jogo
 </p>
 
 ## Conclusão
