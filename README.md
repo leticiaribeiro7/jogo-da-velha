@@ -69,6 +69,7 @@ Foi utilizado um mouse como dispositivo periférico que serve de entrada para o 
 </p>
 
 ### Push Buttons
+
 Os push buttons, também conhecidos como botões de pressão, são dispositivos de entrada que permitem aos usuários interagir com sistemas eletrônicos ou dispositivos por meio de pressão física. Sua escolha se justifica pela capacidade de fornecer uma interface física intuitiva, facilitando a interação dos usuários com dispositivos eletrônicos. Isso permite operações simples e diretas, melhorando a experiência do usuário.
 
 No projeto em questão, os botões foram utilizados para iniciar, encerrar partida e encerrar um jogo. 
@@ -136,8 +137,10 @@ Em relação à mudança das coordenadas, o movimento funciona da seguinte forma
 - Movimento para baixo: O valor de Y aumenta
 
 #### Casas do tabuleiro
-As jogadas propriamente ditas são executadas através de uma lógica de "casas", o tabuleiro é subdividido em 9 espaços em que os jogadores podem escolher (caso o outro jogador não tenha jogado naquele espaço) e finalizar a jogada com um clique do mouse no botão esquerdo. A todo tempo durante a execução, é mostrado em qual casa o jogador se encontra, e vai mudando conforme o mouse é movimentado.
+<p align="justify"> 
+    As jogadas propriamente ditas são executadas através de uma lógica de "casas", o tabuleiro é subdividido em 9 espaços em que os jogadores podem escolher (caso o outro jogador não tenha jogado naquele espaço) e finalizar a jogada com um clique do mouse no botão esquerdo. A todo tempo durante a execução, é mostrado em qual casa o jogador se encontra, e vai mudando conforme o mouse é movimentado.
 Cada casa possui 50 unidades de tamanho, o valor foi decidido de acordo à sensibilidade envolvida na mudança de uma casa para outra.
+</p>
 
 <p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/tabuleiro.png" alt="Botões da placa" width="300">
@@ -171,11 +174,18 @@ Os seguintes casos de teste demonstram as possibilidades que podem acontecer dur
 
 ## Conclusão
 
-Conclui-se que o desenvolvimento do jogo da velha no terminal foi uma experiência enriquecedora para os integrantes do grupo, permitindo aplicar conceitos de programação e eletrônica de forma prática. O projeto não só proporcionou entretenimento, mas também maior conhecimento nas áreas citadas.
+<p align="justify">
+    Conclui-se que o desenvolvimento do jogo da velha no terminal foi uma experiência enriquecedora para os integrantes do grupo, permitindo aplicar conceitos de programação e eletrônica de forma prática. O projeto não só proporcionou entretenimento, mas também maior conhecimento nas áreas citadas.
+</p>
 
 
 
 ## Referências
 
-
-
+<p align="justify"> 
+PAVLIK, Vojtech. Linux Input drivers v1.0. Disponível em: https://www.kernel.org/doc/Documentation/input/input.txt. Acesso em: 01 maio 2024.
+    
+INTEL. DE1-SoC Board. Disponível em: https://www.intel.com/content/www/us/en/partner/showcase/offering/a5b3b0000004cbaAAA/de1soc-board.html. Acesso em: 08 maio 2024.
+    
+FERRARI, Lucas. Introdução à Programação em C. Disponível em: https://www.inf.ufpr.br/roberto/ci067/01_intro.html. Acesso em: 09 maio 2024.
+</p>
