@@ -91,6 +91,14 @@ O Visual Studio Code é um editor de texto bastante popular que tem suporte para
 
 ## Arquitetura da DE1-SoC
 
+### Sistema de Processador Rígido (HPS)
+<p align="justify">
+O HPS (Hard Processor System) na placa DE1-SoC incorpora um processador ARM Cortex-A9 de dois núcleos, cada um com uma arquitetura de 32 bits, e seus subsistemas associados são implementados como circuitos de hardware no ship Cyclone V Soc da Intel. Além dos núcleos de processador, o HPS inclui uma porta de memória DDR3 e um conjunto de dispositivos periféricos, como USB, Ethernet e HDMI. Também estão presentes controladores de interrupção e outros recursos essenciais para o funcionamento do sistema como um todo. O HPS e o FPGA na placa trabalham em conjunto para oferecer uma plataforma de desenvolvimento completa e versátil.
+</p>
+
+### FPGA
+
+
 
 ## Execução
 
@@ -124,7 +132,7 @@ As jogadas propriamente ditas são executadas através de uma lógica de "casas"
 Cada casa possui 50 unidades de tamanho, o valor foi decidido de acordo à sensibilidade envolvida na mudança de uma casa para outra.
 
 <p align="center">
-    <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/tabuleiro.png" alt="Botões da placa" width="500">
+    <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/tabuleiro.png" alt="Botões da placa" width="300">
     <br>
      Representação da subdivisão do tabuleiro
 </p>
