@@ -46,7 +46,7 @@ A placa de desenvolvimento DE1-SoC é uma plataforma baseada no chip Altera Cycl
 <p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/placa.jpg" alt="Placa DE1-SoC" width="500">
     <br>
-    Figura 1. Esta é a placa de desenvolvimento DE1-SoC.
+    Figura 1. Placa de desenvolvimento DE1-SoC.
 </p>
 
 <p align="justify">
@@ -64,7 +64,7 @@ Os periféricos utilizados na construção do projeto com a DE1-SoC incluíram e
 Foi utilizado um mouse como dispositivo periférico que serve de entrada para o jogador selecionar a posição no tabuleiro do jogo e realizar a jogada. Para tal, o mouse é conectado através de uma de suas entradas USB. <p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/mouse conectado na placa.jpg" alt="Mouse conectado na placa" width="500">
     <br>
-    Figura 3. Esta é a placa de desenvolvimento DE1-SoC conectada ao mouse.
+    Figura 3. Placa de desenvolvimento DE1-SoC conectada ao mouse.
 </p>
 </p>
 
@@ -160,6 +160,10 @@ Os seguintes casos de teste demonstram as possibilidades que podem acontecer dur
 <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/saindo do jogo.png" alt="saindo do jogo" width="300">
 
 ## Conclusão
+
+Conclui-se que o desenvolvimento do jogo da velha no terminal foi uma experiência enriquecedora para os integrantes do grupo, permitindo aplicar conceitos de programação e eletrônica de forma prática. O projeto não só proporcionou entretenimento, mas também maior conhecimento nas áreas citadas.
+
+
 
 ## Referências
 
