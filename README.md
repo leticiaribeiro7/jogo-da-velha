@@ -69,6 +69,7 @@ Foi utilizado um mouse como dispositivo periférico que serve de entrada para o 
 </p>
 
 ### Push Buttons
+
 Os push buttons, também conhecidos como botões de pressão, são dispositivos de entrada que permitem aos usuários interagir com sistemas eletrônicos ou dispositivos por meio de pressão física. Sua escolha se justifica pela capacidade de fornecer uma interface física intuitiva, facilitando a interação dos usuários com dispositivos eletrônicos. Isso permite operações simples e diretas, melhorando a experiência do usuário.
 
 No projeto em questão, os botões foram utilizados para iniciar, encerrar partida e encerrar um jogo. 
@@ -179,8 +180,10 @@ Os seguintes casos de teste demonstram as possibilidades que podem acontecer dur
 
 ## Referências
 
+<p align="justify"> 
 PAVLIK, Vojtech. Linux Input drivers v1.0. Disponível em: https://www.kernel.org/doc/Documentation/input/input.txt. Acesso em: 01 maio 2024.
-
+    
 INTEL. DE1-SoC Board. Disponível em: https://www.intel.com/content/www/us/en/partner/showcase/offering/a5b3b0000004cbaAAA/de1soc-board.html. Acesso em: 08 maio 2024.
-
+    
 FERRARI, Lucas. Introdução à Programação em C. Disponível em: https://www.inf.ufpr.br/roberto/ci067/01_intro.html. Acesso em: 09 maio 2024.
+</p>
