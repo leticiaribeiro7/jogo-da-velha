@@ -109,7 +109,7 @@ O FPGA implementa várias portas periféricas, incluindo memória, módulos de t
 </p>
 
 <p align="center">
-    <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/diagrama_placa.png" alt="Diagrama de blocos" width="300">
+    <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/diagrama_placa.png" alt="Diagrama de blocos" width="500">
     <br>
     Figura 5. Diagrama de blocos do DE1-SoC
 </p>
