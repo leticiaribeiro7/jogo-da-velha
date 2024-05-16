@@ -218,5 +218,5 @@ Os seguintes casos de teste demonstram as possibilidades que podem acontecer dur
 </p>
 
 <p align="justify"> 
-    Technologies, Terasic. DE1-SoC User Manual. Disponível em: file:///C:/Users/vitor/Downloads/DE1-SoC_User_manual_revf.pdf. Acesso em: 04 maio 2024.
+    Technologies, Terasic. DE1-SoC User Manual. Disponível em: http://www.ee.ic.ac.uk/pcheung/teaching/ee2_digital/de1-soc_user_manual.pdf. Acesso em: 04 maio 2024.
 </p>
