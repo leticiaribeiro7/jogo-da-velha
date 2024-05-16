@@ -148,9 +148,16 @@ Os seguintes casos de teste demonstram as possibilidades que podem acontecer dur
 
 <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/empate.png" alt="Empate" width="300">
 
-- iniciar jogo
-- sair do jogo
+- Iniciar jogo
+<img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/menu inicio.png" alt="menu inicio" width="300">
 
+- Desistir da partida atual
+<img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/desistindo da partida.png" alt="desistindo da partida" width="300">
+
+<img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/partida cancelada.png" alt="partida cancelada" width="300">
+
+- Sair do jogo
+<img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/saindo do jogo.png" alt="saindo do jogo" width="300">
 
 ## Conclusão
 
