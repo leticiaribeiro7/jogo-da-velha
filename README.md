@@ -116,7 +116,7 @@ O Visual Studio Code é um editor de texto bastante popular que tem suporte para
 
 ### Sistema de Processador Rígido (HPS)
 <p align="justify">
-O HPS (Hard Processor System) na placa DE1-SoC incorpora um processador ARM Cortex-A9 de dois núcleos, cada um com uma arquitetura de 32 bits, e seus subsistemas associados são implementados como circuitos de hardware no ship Cyclone V Soc da Intel. Além dos núcleos de processador, o HPS inclui uma porta de memória DDR3 e um conjunto de dispositivos periféricos, como USB, Ethernet e HDMI. Também estão presentes controladores de interrupção e outros recursos essenciais para o funcionamento do sistema como um todo. O HPS e o FPGA na placa trabalham em conjunto para oferecer uma plataforma de desenvolvimento completa e versátil.
+O *HPS* (Hard Processor System) na placa DE1-SoC incorpora um processador ARM Cortex-A9 de dois núcleos, cada um com uma arquitetura de 32 bits, e seus subsistemas associados são implementados como circuitos de hardware no chip Cyclone V Soc da Intel. Além dos núcleos de processador, o HPS inclui uma porta de memória DDR3 e um conjunto de dispositivos periféricos, como USB, Ethernet e HDMI. Também estão presentes controladores de interrupção e outros recursos essenciais para o funcionamento do sistema como um todo. O HPS e o FPGA na placa trabalham em conjunto para oferecer uma plataforma de desenvolvimento completa e versátil.
 </p>
 
 ### FPGA
@@ -144,16 +144,18 @@ sudo ./jogo.exe
 #### Solução Geral do Problema
 <p align="justify">
 A solução geral do projeto aborda todas as necessidades para sua execução de forma abrangente. Primeiramente, os periféricos utilizados na DE1-SoC são inicializados, incluindo a configuração para entrada e leitura do mouse, botões e os elementos do jogo, como o tabuleiro com suas casas numeradas de 1 a 9 e os símbolos "X" e "O". Quando o botão KEY0 é pressionado, a partida é iniciada. Durante o jogo, o movimento do mouse é monitorado para capturar os cliques e verificar se a jogada é válida. Se uma jogada válida é realizada, ela é registrada; caso contrário, não é considerada.
-
+</p>
+<p align="justify"> 
 Após cada jogada, é verificado se houve uma vitória ou empate. Se uma condição de vitória ou empate é alcançada, uma mensagem é exibida no terminal. Se algum jogador pressionar o botão KEY0 após o fim da partida, o jogo é reiniciado.
-
+</p>
+<p align="justify"> 
 Durante o jogo, se um jogador pressionar o botão KEY1, isso é interpretado como uma desistência da partida, e o jogo é reiniciado. Se o botão KEY2 é pressionado, a partida é cancelada, interrompendo a execução do jogo.
 </p>
 
 <p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/diagramaGeral.png" alt="Fluxograma geral do projeto" width="700">
     <br>
-    Figura 5. Fluxograma da solução geral do projeto
+    Figura 6. Fluxograma da solução geral do projeto
 </p>
 
 
@@ -187,7 +189,7 @@ Cada casa possui 50 unidades de tamanho, o valor foi decidido de acordo à sensi
 <p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/tabuleiro.png" alt="Botões da placa" width="300">
     <br>
-     Figura 6. Representação da subdivisão do tabuleiro
+     Figura 7. Representação da subdivisão do tabuleiro
 </p>
 
 
@@ -199,7 +201,7 @@ Os seguintes casos de teste demonstram as possibilidades que podem acontecer dur
 <p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/vitoria.png" alt="Vitoria" width="300">
     <br>
-    Figura 7. Cenário de teste onde ocorreu vitória
+    Figura 8. Cenário de teste onde ocorreu vitória
     <br>
     <br>
 </p>
@@ -207,7 +209,7 @@ Os seguintes casos de teste demonstram as possibilidades que podem acontecer dur
 <p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/empate.png" alt="Empate" width="300">
     <br>
-    Figura 8. Cenário de teste onde ocorreu empate
+    Figura 9. Cenário de teste onde ocorreu empate
     <br>
     <br>
 </p>
@@ -215,7 +217,7 @@ Os seguintes casos de teste demonstram as possibilidades que podem acontecer dur
 <p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/menu inicio.png" alt="menu inicio" width="600">
     <br>
-    Figura 9. Cenário de teste para escolher alguma opção do menu
+    Figura 10. Cenário de teste para escolher alguma opção do menu
     <br>
     <br>
 </p>
@@ -223,7 +225,7 @@ Os seguintes casos de teste demonstram as possibilidades que podem acontecer dur
 <p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/desistindo da partida.png" alt="desistindo da partida" width="300">
     <br>
-    Figura 10. Cenário de teste desistindo da partida
+    Figura 11. Cenário de teste desistindo da partida
     <br>
     <br>
 </p>
@@ -231,7 +233,7 @@ Os seguintes casos de teste demonstram as possibilidades que podem acontecer dur
 <p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/partida cancelada.png" alt="partida cancelada" width="300">
     <br>
-    Figura 11. Cenário de teste confirma que a partida foi cancelada
+    Figura 12. Cenário de teste confirma que a partida foi cancelada
     <br>
     <br>
 </p>
@@ -239,18 +241,18 @@ Os seguintes casos de teste demonstram as possibilidades que podem acontecer dur
 <p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/saindo do jogo.png" alt="saindo do jogo" width="300">
     <br>
-    Figura 12. Cenário de teste encerrando e saindo do jogo
+    Figura 13. Cenário de teste encerrando e saindo do jogo
     <br>
     <br>
 </p>
 
 ## Conclusão
-
-<p align="justify">
-    Conclui-se que o desenvolvimento do jogo da velha no terminal foi uma experiência enriquecedora para os integrantes do grupo, permitindo aplicar conceitos de programação e eletrônica de forma prática. O projeto não só proporcionou entretenimento, mas também maior conhecimento nas áreas citadas.
+<p align="justify"> 
+Conclui-se que o desenvolvimento do jogo da velha no terminal, utilizando a linguagem C e o kit de desenvolvimento DE1-SoC, foi uma experiência altamente enriquecedora para os integrantes do grupo. Permitiu a aplicação prática de conceitos de programação e eletrônica, proporcionando não apenas entretenimento, mas também maior conhecimento nas áreas citadas.
 </p>
-
-
+<p align="justify"> 
+A harmonização eficiente entre hardware e software proporcionada pela placa permitiu a integração perfeita de periféricos, como entrada USB e botões, garantindo o funcionamento adequado e a solução eficaz do projeto. Os testes realizados confirmaram o bom funcionamento do projeto, validando sua eficiência em condições essenciais para a execução do jogo.
+</p>
 
 ## Referências
 
