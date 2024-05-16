@@ -177,3 +177,4 @@ Conclui-se que o desenvolvimento do jogo da velha no terminal foi uma experiênc
 
 PAVLIK, Vojtech. Linux Input drivers v1.0. Disponível em: https://www.kernel.org/doc/Documentation/input/input.txt. Acesso em: 01 maio 2024.
 
+INTEL. DE1-SoC Board. Disponível em: https://www.intel.com/content/www/us/en/partner/showcase/offering/a5b3b0000004cbaAAA/de1soc-board.html. Acesso em: 08 maio 2024.
