@@ -116,7 +116,7 @@ O Visual Studio Code é um editor de texto bastante popular que tem suporte para
 
 ### Sistema de Processador Rígido (HPS)
 <p align="justify">
-O *HPS* (Hard Processor System) na placa DE1-SoC incorpora um processador ARM Cortex-A9 de dois núcleos, cada um com uma arquitetura de 32 bits, e seus subsistemas associados são implementados como circuitos de hardware no chip Cyclone V Soc da Intel. Além dos núcleos de processador, o HPS inclui uma porta de memória DDR3 e um conjunto de dispositivos periféricos, como USB, Ethernet e HDMI. Também estão presentes controladores de interrupção e outros recursos essenciais para o funcionamento do sistema como um todo. O HPS e o FPGA na placa trabalham em conjunto para oferecer uma plataforma de desenvolvimento completa e versátil.
+O HPS (Hard Processor System) na placa DE1-SoC incorpora um processador ARM Cortex-A9 de dois núcleos, cada um com uma arquitetura de 32 bits, e seus subsistemas associados são implementados como circuitos de hardware no chip Cyclone V Soc da Intel. Além dos núcleos de processador, o HPS inclui uma porta de memória DDR3 e um conjunto de dispositivos periféricos, como USB, Ethernet e HDMI. Também estão presentes controladores de interrupção e outros recursos essenciais para o funcionamento do sistema como um todo. O HPS e o FPGA na placa trabalham em conjunto para oferecer uma plataforma de desenvolvimento completa e versátil.
 </p>
 
 ### FPGA
