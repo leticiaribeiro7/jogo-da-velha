@@ -142,6 +142,14 @@ sudo ./jogo.exe
 ## Funcionamento do Jogo
 
 #### Solução Geral do Problema
+<p align="justify">
+A solução geral do projeto aborda todas as necessidades para sua execução de forma abrangente. Primeiramente, os periféricos utilizados na DE1-SoC são inicializados, incluindo a configuração para entrada e leitura do mouse, botões e os elementos do jogo, como o tabuleiro com suas casas numeradas de 1 a 9 e os símbolos "X" e "O". Quando o botão KEY0 é pressionado, a partida é iniciada. Durante o jogo, o movimento do mouse é monitorado para capturar os cliques e verificar se a jogada é válida. Se uma jogada válida é realizada, ela é registrada; caso contrário, não é considerada.
+
+Após cada jogada, é verificado se houve uma vitória ou empate. Se uma condição de vitória ou empate é alcançada, uma mensagem é exibida no terminal. Se algum jogador pressionar o botão KEY0 após o fim da partida, o jogo é reiniciado.
+
+Durante o jogo, se um jogador pressionar o botão KEY1, isso é interpretado como uma desistência da partida, e o jogo é reiniciado. Se o botão KEY2 é pressionado, a partida é cancelada, interrompendo a execução do jogo.
+</p>
+
 <p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/diagramaGeral.png" alt="Fluxograma geral do projeto" width="700">
     <br>
