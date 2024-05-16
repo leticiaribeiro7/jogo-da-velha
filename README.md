@@ -156,6 +156,7 @@ Durante o jogo, se um jogador pressionar o botão KEY1, isso é interpretado com
     Figura 5. Fluxograma da solução geral do projeto
 </p>
 
+
 <p align="justify"> 
     Para possibilitar o funcionamento do jogo utilizando o mouse, foi utilizado o arquivo **/dev/input/mice** disponível em distribuições Linux. Esse arquivo trata-se de um driver que detecta os dados do mouse, como cliques dos botões e movimentação. Portanto, ao abrir este arquivo em modo leitura no código fonte foi possível criar uma lógica de verificação das coordenadas X e Y do mouse e limitá-las ao tamanho desejado.
 </p>
@@ -195,7 +196,7 @@ Cada casa possui 50 unidades de tamanho, o valor foi decidido de acordo à sensi
 
 Os seguintes casos de teste demonstram as possibilidades que podem acontecer durante o jogo:
 
-<p>
+<p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/vitoria.png" alt="Vitoria" width="300">
     <br>
     Figura 7. Cenário de teste onde ocorreu vitória
@@ -203,7 +204,7 @@ Os seguintes casos de teste demonstram as possibilidades que podem acontecer dur
     <br>
 </p>
 
-<p>
+<p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/empate.png" alt="Empate" width="300">
     <br>
     Figura 8. Cenário de teste onde ocorreu empate
@@ -211,7 +212,7 @@ Os seguintes casos de teste demonstram as possibilidades que podem acontecer dur
     <br>
 </p>
 
-<p>
+<p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/menu inicio.png" alt="menu inicio" width="600">
     <br>
     Figura 9. Cenário de teste para escolher alguma opção do menu
@@ -219,7 +220,7 @@ Os seguintes casos de teste demonstram as possibilidades que podem acontecer dur
     <br>
 </p>
 
-<p>
+<p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/desistindo da partida.png" alt="desistindo da partida" width="300">
     <br>
     Figura 10. Cenário de teste desistindo da partida
@@ -227,7 +228,7 @@ Os seguintes casos de teste demonstram as possibilidades que podem acontecer dur
     <br>
 </p>
 
-<p>
+<p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/partida cancelada.png" alt="partida cancelada" width="300">
     <br>
     Figura 11. Cenário de teste confirma que a partida foi cancelada
@@ -235,7 +236,7 @@ Os seguintes casos de teste demonstram as possibilidades que podem acontecer dur
     <br>
 </p>
 
-<p>
+<p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/saindo do jogo.png" alt="saindo do jogo" width="300">
     <br>
     Figura 12. Cenário de teste encerrando e saindo do jogo
