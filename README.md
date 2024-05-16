@@ -186,10 +186,10 @@ Figura 6. Cenário de teste onde ocorreu vitória
 
 
 - Empate
-
+<figure>
 <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/empate.png" alt="Empate" width="300">
-Figura 7. Cenário de teste onde ocorreu empate
-
+<figcaption>Figura 7. Cenário de teste onde ocorreu empate
+</figure>
 - Iniciar jogo
 <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/menu inicio.png" alt="menu inicio" width="600">
 Figura 8. Cenário de teste para escolher alguma opção do menu
