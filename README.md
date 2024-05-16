@@ -1,6 +1,12 @@
 # Jogo da Velha
 
 ## Sobre
+O nosso projeto consistiu em desenvolver um jogo da velha na placa DE1-SoC, aproveitando os recursos disponíveis para criar uma experiência de jogabilidade imersiva. Para isso, optamos por uma interface em modo texto, que possibilita a apresentação clara e compreensível do tabuleiro do jogo e das interações dos jogadores.
+
+Um dos pontos-chave do nosso projeto foi a integração de um mouse, permitindo que os jogadores interajam de forma precisa e direta com o jogo. Conectar o mouse à porta USB da placa oferece uma seleção intuitiva das posições no tabuleiro, garantindo uma experiência de jogo fluida e gratificante.
+
+Além disso, para complementar a experiência, utilizamos os botões da placa para funções específicas do jogo. Esses botões foram usados para iniciar, pausar e reiniciar o jogo de maneira simples e eficiente, proporcionando uma jogabilidade intuitiva.
+
 
 ## Sumário
 - [Softwares e Periféricos Utilizados](#softwares-e-periféricos-utilizados)
@@ -40,7 +46,7 @@ A placa de desenvolvimento DE1-SoC é uma plataforma baseada no chip Altera Cycl
 <p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/placa.jpg" alt="Placa DE1-SoC" width="500">
     <br>
-    Figura 1. Esta é a placa de desenvolvimento DE1-SoC.
+    Figura 1. Placa de desenvolvimento DE1-SoC.
 </p>
 
 <p align="justify">
@@ -58,7 +64,7 @@ Os periféricos utilizados na construção do projeto com a DE1-SoC incluíram e
 Foi utilizado um mouse como dispositivo periférico que serve de entrada para o jogador selecionar a posição no tabuleiro do jogo e realizar a jogada. Para tal, o mouse é conectado através de uma de suas entradas USB. <p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/mouse conectado na placa.jpg" alt="Mouse conectado na placa" width="500">
     <br>
-    Figura 3. Esta é a placa de desenvolvimento DE1-SoC conectada ao mouse.
+    Figura 3. Placa de desenvolvimento DE1-SoC conectada ao mouse.
 </p>
 </p>
 
@@ -134,7 +140,7 @@ Cada casa possui 50 unidades de tamanho, o valor foi decidido de acordo à sensi
 <p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/tabuleiro.png" alt="Botões da placa" width="300">
     <br>
-     Representação da subdivisão do tabuleiro
+     Figura 5. Representação da subdivisão do tabuleiro
 </p>
 
 
@@ -150,11 +156,22 @@ Os seguintes casos de teste demonstram as possibilidades que podem acontecer dur
 
 <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/empate.png" alt="Empate" width="300">
 
-- iniciar jogo
-- sair do jogo
+- Iniciar jogo
+<img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/menu inicio.png" alt="menu inicio" width="600">
 
+- Desistir da partida atual
+<img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/desistindo da partida.png" alt="desistindo da partida" width="300">
+
+<img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/partida cancelada.png" alt="partida cancelada" width="300">
+
+- Sair do jogo
+<img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/saindo do jogo.png" alt="saindo do jogo" width="300">
 
 ## Conclusão
+
+Conclui-se que o desenvolvimento do jogo da velha no terminal foi uma experiência enriquecedora para os integrantes do grupo, permitindo aplicar conceitos de programação e eletrônica de forma prática. O projeto não só proporcionou entretenimento, mas também maior conhecimento nas áreas citadas.
+
+
 
 ## Referências
 
