@@ -22,7 +22,7 @@ Além disso, para complementar a experiência, utilizamos os botões da placa pa
     - [Mouse](#mouse)
     - [Push Buttons](#push-buttons)
 
-- [Arquitetura da DE1 SoC](#arquitetura-da-de1soc)
+- [Arquitetura Geral da DE1 SoC](#arquitetura-da-de1soc)
 - [Execução](#execução)
 - [Lógica do Jogo](#lógica-do-jogo)
 - [Cenários de Testes](#cenários-de-testes)
@@ -137,6 +137,13 @@ sudo ./jogo.exe
 ```
 
 ## Funcionamento do Jogo
+
+### Solução Geral do Problema
+<p align="center">
+    <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/diagrama_placa.png" alt="Diagrama de blocos" width="500">
+    <br>
+    Figura 5. Diagrama de blocos do DE1-SoC
+</p>
 
 <p align="justify"> 
     Para possibilitar o funcionamento do jogo utilizando o mouse, foi utilizado o arquivo **/dev/input/mice** disponível em distribuições Linux. Esse arquivo trata-se de um driver que detecta os dados do mouse, como cliques dos botões e movimentação. Portanto, ao abrir este arquivo em modo leitura no código fonte foi possível criar uma lógica de verificação das coordenadas X e Y do mouse e limitá-las ao tamanho desejado.
