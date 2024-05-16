@@ -101,11 +101,11 @@ int main() {
             break;
         } // Se o botão KEY0 é pressionado, o jogo inicia.
         else if (dataButton == 0b001) {
-			reinicializarTabuleiro(tabuleiro); // Reinicializa o tabuleiro do jogo
+	    reinicializarTabuleiro(tabuleiro); // Reinicializa o tabuleiro do jogo
             controladorCliques = 1;
             imprimirTabuleiro(tabuleiro); // Imprime o tabuleiro atualizado
             printf("Jogadas: %d\n\n", jogadas);
-			printf("Você está na casa %d\n", casa);
+	    printf("Você está na casa %d\n", casa);
             printf("Vez do jogador %c\n\n", jogador);
         }
 
@@ -158,7 +158,7 @@ int main() {
 		            int i = 5;
                     system("clear");
                     for (i; i > 0; i--) {
-			            imprimirTabuleiro(tabuleiro);
+			imprimirTabuleiro(tabuleiro);
                     	printf("%c Ganhou!\n", jogador); // Exibe o jogador vencedor.
                         printf("Voltando para o menu em %d...\n", i); // Informa sobre o retorno ao menu.
                         sleep(1);
@@ -170,13 +170,13 @@ int main() {
                     controladorCliques = 0; // Encerra o loop while (controladorCliques) após o término da partida.
                     
                 } else if (empate) {
-		            int i = 5;
+		    int i = 5;
                     system("clear");
                     imprimirTabuleiro(tabuleiro);
                     printf("Empate!\n");
                     
                     for (i; i > 0; i--) {
-			            imprimirTabuleiro(tabuleiro);
+			imprimirTabuleiro(tabuleiro);
                     	printf("Empate!\n");
                         printf("Voltando para o menu em %d...\n", i);
                         sleep(1);
