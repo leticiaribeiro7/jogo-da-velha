@@ -216,3 +216,7 @@ Os seguintes casos de teste demonstram as possibilidades que podem acontecer dur
 <p align="justify"> 
     FERRARI, Lucas. Introdução à Programação em C. Disponível em: https://www.inf.ufpr.br/roberto/ci067/01_intro.html. Acesso em: 09 maio 2024.
 </p>
+
+<p align="justify"> 
+    Technologies, Terasic. DE1-SoC User Manual. Disponível em: file:///C:/Users/vitor/Downloads/DE1-SoC_User_manual_revf.pdf. Acesso em: 04 maio 2024.
+</p>
