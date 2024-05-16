@@ -121,7 +121,7 @@ int verificarEmpate(char tabuleiro[3][3], int *jogadas) {
     int resultadoLinhas = verificarLinhas(tabuleiro);
     int resultadoColunas = verificarColunas(tabuleiro);
 
-    // Se nenhuma das condições indicar um vencedor, então há um empate
+    // Se nenhuma das condições indicar um vencedor e todas as jogadas foram feitas, então há um empate
     if (!resultadoDiagonalPrincipal &&
         !resultadoDiagonalSecundaria &&
         !resultadoLinhas && 
@@ -134,12 +134,13 @@ int verificarEmpate(char tabuleiro[3][3], int *jogadas) {
 
 }
 
+// Função para verificar se houve um vencedor no jogo
 int verificarVitoria(char tabuleiro[3][3]) {
     int resultadoDiagonalPrincipal = verificaDiagonalPrincipal(tabuleiro);
     int resultadoDiagonalSecundaria = verificaDiagonalSecundaria(tabuleiro);
     int resultadoLinhas = verificarLinhas(tabuleiro);
     int resultadoColunas = verificarColunas(tabuleiro);
-
+    // Se alguma das condições indicar um vencedor, retorna 1
     if (resultadoDiagonalPrincipal || resultadoDiagonalSecundaria || resultadoLinhas || resultadoColunas) {
         return 1;
     } else {
@@ -149,6 +150,8 @@ int verificarVitoria(char tabuleiro[3][3]) {
 }
 
 int jogadaValida(char tabuleiro[3][3], int i, int j) {
+
+    // Verifica se a posição no tabuleiro não está ocupada
     if (tabuleiro[i][j] == 'X' || tabuleiro[i][j] == 'O') {
         return 0;
     }
