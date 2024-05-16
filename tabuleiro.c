@@ -42,10 +42,10 @@ void reinicializarTabuleiro(char tabuleiro[3][3]) {
  *                     caso contrário, retorna 0.
 */
 int verificaDiagonalPrincipal(char tabuleiro[3][3]) {
-	char elemento = tabuleiro[0][0];
+    char elemento = tabuleiro[0][0];
     int i;
 	for (i = 0; i < 3; i++) {
-		if (tabuleiro[i][i] != elemento) {
+	   if (tabuleiro[i][i] != elemento) {
 			return 0; 
 		}
 	}

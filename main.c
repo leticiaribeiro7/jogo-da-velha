@@ -17,10 +17,10 @@ char alternaJogadores(int jogadas) {
 
 // Limitando coordenadas entre 1 e 200
 void limitarCursor(int *x, int *y) {
-    if (*x <= 1) *x = 1; // Se x for menor ou igual a 1, define x como 1
-    if (*y <= 1) *y = 1; // Se y for menor ou igual a 1, define y como 1
-    if (*x >= 200) *x = 200; // Se y for menor ou igual a 1, define y como 1
-    if (*y >= 200) *y = 200; // Se y for maior ou igual a 200, define y como 200
+    if (*x <= 1) *x = 1;
+    if (*y <= 1) *y = 1;
+    if (*x >= 200) *x = 200;
+    if (*y >= 200) *y = 200;
 }
 
 // Esta função determina em qual "casa" (quadrante) do tabuleiro está uma determinada posição (x, y).
@@ -80,9 +80,6 @@ int main() {
         {1, 0}, {1, 1}, {1, 2},
         {2, 0}, {2, 1}, {2, 2}
     };
-
-
-    
     
 
     while (executando) {
@@ -101,11 +98,11 @@ int main() {
             break;
         } // Se o botão KEY0 é pressionado, o jogo inicia.
         else if (dataButton == 0b001) {
-			reinicializarTabuleiro(tabuleiro); // Reinicializa o tabuleiro do jogo
+	    reinicializarTabuleiro(tabuleiro); // Reinicializa o tabuleiro do jogo
             controladorCliques = 1;
             imprimirTabuleiro(tabuleiro); // Imprime o tabuleiro atualizado
             printf("Jogadas: %d\n\n", jogadas);
-			printf("Você está na casa %d\n", casa);
+	    printf("Você está na casa %d\n", casa);
             printf("Vez do jogador %c\n\n", jogador);
         }
 
@@ -155,10 +152,10 @@ int main() {
                 int empate = verificarEmpate(tabuleiro, &jogadas);
 
                 if (vitoria) {
-		            int i = 5;
+		    int i = 5;
                     system("clear");
                     for (i; i > 0; i--) {
-			            imprimirTabuleiro(tabuleiro);
+			imprimirTabuleiro(tabuleiro);
                     	printf("%c Ganhou!\n", jogador); // Exibe o jogador vencedor.
                         printf("Voltando para o menu em %d...\n", i); // Informa sobre o retorno ao menu.
                         sleep(1);
@@ -170,13 +167,13 @@ int main() {
                     controladorCliques = 0; // Encerra o loop while (controladorCliques) após o término da partida.
                     
                 } else if (empate) {
-		            int i = 5;
+		    int i = 5;
                     system("clear");
                     imprimirTabuleiro(tabuleiro);
                     printf("Empate!\n");
                     
                     for (i; i > 0; i--) {
-			            imprimirTabuleiro(tabuleiro);
+			imprimirTabuleiro(tabuleiro);
                     	printf("Empate!\n");
                         printf("Voltando para o menu em %d...\n", i);
                         sleep(1);
