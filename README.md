@@ -66,7 +66,7 @@ Além disso, para complementar a experiência, utilizamos os botões da placa pa
 
 ### Mouse
 <p align="justify">
-    Foi utilizado um mouse como dispositivo periférico que serve de entrada para o jogador selecionar a posição no tabuleiro do jogo e realizar a jogada. Para tal, o mouse é conectado através de uma de suas entradas USB. <p align="center">
+    Foi utilizado um mouse como dispositivo periférico que serve de entrada para o jogador selecionar a posição no tabuleiro do jogo e realizar a jogada. Para tal, o mouse é conectado através de uma das entradas USB da placa. <p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/mouse conectado na placa.jpg" alt="Mouse conectado na placa" width="500">
     <br>
     Figura 3. Placa de desenvolvimento DE1-SoC conectada ao mouse.
@@ -228,4 +228,8 @@ Figura 11. Cenário de teste encerrando e saindo do jogo
 
 <p align="justify"> 
     FERRARI, Lucas. Introdução à Programação em C. Disponível em: https://www.inf.ufpr.br/roberto/ci067/01_intro.html. Acesso em: 09 maio 2024.
+</p>
+
+<p align="justify"> 
+    Technologies, Terasic. DE1-SoC User Manual. Disponível em: file:///C:/Users/vitor/Downloads/DE1-SoC_User_manual_revf.pdf. Acesso em: 04 maio 2024.
 </p>
