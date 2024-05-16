@@ -143,7 +143,7 @@ sudo ./jogo.exe
 
 #### Solução Geral do Problema
 <p align="center">
-    <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/diagramaGeral.png" alt="Fluxograma geral do projeto" width="500">
+    <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/diagramaGeral.png" alt="Fluxograma geral do projeto" width="700">
     <br>
     Figura 5. Fluxograma da solução geral do projeto
 </p>
