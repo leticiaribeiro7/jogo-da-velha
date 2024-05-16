@@ -175,5 +175,5 @@ Conclui-se que o desenvolvimento do jogo da velha no terminal foi uma experiênc
 
 ## Referências
 
-
+PAVLIK, Vojtech. Linux Input drivers v1.0. Disponível em: https://www.kernel.org/doc/Documentation/input/input.txt. Acesso em: 01 maio 2024.
 
