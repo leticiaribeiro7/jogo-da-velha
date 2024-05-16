@@ -46,7 +46,7 @@ A placa de desenvolvimento DE1-SoC é uma plataforma baseada no chip Altera Cycl
 <p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/placa.jpg" alt="Placa DE1-SoC" width="500">
     <br>
-    Figura 1. Esta é a placa de desenvolvimento DE1-SoC.
+    Figura 1. Placa de desenvolvimento DE1-SoC.
 </p>
 
 <p align="justify">
@@ -64,7 +64,7 @@ Os periféricos utilizados na construção do projeto com a DE1-SoC incluíram e
 Foi utilizado um mouse como dispositivo periférico que serve de entrada para o jogador selecionar a posição no tabuleiro do jogo e realizar a jogada. Para tal, o mouse é conectado através de uma de suas entradas USB. <p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/mouse conectado na placa.jpg" alt="Mouse conectado na placa" width="500">
     <br>
-    Figura 3. Esta é a placa de desenvolvimento DE1-SoC conectada ao mouse.
+    Figura 3. Placa de desenvolvimento DE1-SoC conectada ao mouse.
 </p>
 </p>
 
@@ -96,6 +96,14 @@ O Visual Studio Code é um editor de texto bastante popular que tem suporte para
 </p>
 
 ## Arquitetura da DE1-SoC
+
+### Sistema de Processador Rígido (HPS)
+<p align="justify">
+O HPS (Hard Processor System) na placa DE1-SoC incorpora um processador ARM Cortex-A9 de dois núcleos, cada um com uma arquitetura de 32 bits, e seus subsistemas associados são implementados como circuitos de hardware no ship Cyclone V Soc da Intel. Além dos núcleos de processador, o HPS inclui uma porta de memória DDR3 e um conjunto de dispositivos periféricos, como USB, Ethernet e HDMI. Também estão presentes controladores de interrupção e outros recursos essenciais para o funcionamento do sistema como um todo. O HPS e o FPGA na placa trabalham em conjunto para oferecer uma plataforma de desenvolvimento completa e versátil.
+</p>
+
+### FPGA
+
 
 
 ## Execução
@@ -161,7 +169,14 @@ Os seguintes casos de teste demonstram as possibilidades que podem acontecer dur
 
 ## Conclusão
 
+Conclui-se que o desenvolvimento do jogo da velha no terminal foi uma experiência enriquecedora para os integrantes do grupo, permitindo aplicar conceitos de programação e eletrônica de forma prática. O projeto não só proporcionou entretenimento, mas também maior conhecimento nas áreas citadas.
+
+
+
 ## Referências
 
+PAVLIK, Vojtech. Linux Input drivers v1.0. Disponível em: https://www.kernel.org/doc/Documentation/input/input.txt. Acesso em: 01 maio 2024.
 
+INTEL. DE1-SoC Board. Disponível em: https://www.intel.com/content/www/us/en/partner/showcase/offering/a5b3b0000004cbaAAA/de1soc-board.html. Acesso em: 08 maio 2024.
 
+FERRARI, Lucas. Introdução à Programação em C. Disponível em: https://www.inf.ufpr.br/roberto/ci067/01_intro.html. Acesso em: 09 maio 2024.
