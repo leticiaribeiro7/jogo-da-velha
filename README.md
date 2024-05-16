@@ -143,9 +143,9 @@ sudo ./jogo.exe
 
 ### Solução Geral do Problema
 <p align="center">
-    <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/diagrama_placa.png" alt="Diagrama de blocos" width="500">
+    <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/diagramaGeral.png" alt="Fluxograma geral do projeto" width="500">
     <br>
-    Figura 5. Diagrama de blocos do DE1-SoC
+    Figura 5. Fluxograma da solução geral do projeto
 </p>
 
 <p align="justify"> 
