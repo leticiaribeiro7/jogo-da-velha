@@ -3,13 +3,16 @@
 ## Sobre
 
 <p align="justify"> 
-O nosso projeto consistiu em desenvolver um jogo da velha na placa DE1-SoC, aproveitando os recursos disponíveis para criar uma experiência de jogabilidade imersiva. Para isso, optamos por uma interface em modo texto, que possibilita a apresentação clara e compreensível do tabuleiro do jogo e das interações dos jogadores.
+O projeto consistiu em desenvolver um jogo da velha na placa DE1-SoC, aproveitando os recursos disponíveis para criar uma experiência de jogabilidade imersiva. Para isso, foi optado por uma interface em modo texto, que possibilita a apresentação clara e compreensível do tabuleiro do jogo e das interações dos jogadores.
+
 </p>
 <p align="justify"> 
-Um dos pontos-chave do nosso projeto foi a integração de um mouse, permitindo que os jogadores interajam de forma precisa e direta com o jogo. Conectar o mouse à porta USB da placa oferece uma seleção intuitiva das posições no tabuleiro, garantindo uma experiência de jogo fluida e gratificante.
+Um dos pontos-chave do projeto foi a integração de um mouse, permitindo que os jogadores interajam de forma precisa e direta com o jogo. Conectar o mouse à porta USB da placa oferece uma seleção intuitiva das posições no tabuleiro, garantindo uma experiência de jogo fluida e gratificante.
+
 </p>
 <p align="justify"> 
-Além disso, para complementar a experiência, utilizamos os botões da placa para funções específicas do jogo. Esses botões foram usados para iniciar, pausar e reiniciar o jogo de maneira simples e eficiente, proporcionando uma jogabilidade intuitiva.
+Além disso, para complementar a experiência, foram utilizados os botões da placa para funções específicas do jogo. Esses botões foram empregados para iniciar, pausar e reiniciar o jogo de maneira simples e eficiente, proporcionando uma jogabilidade intuitiva.
+
 </p>
 
 
@@ -186,34 +189,31 @@ Os seguintes casos de teste demonstram as possibilidades que podem acontecer dur
 - Vitória
 
 <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/vitoria.png" alt="Vitoria" width="300">
-<br>
 Figura 6. Cenário de teste onde ocorreu vitória
 
 
 - Empate
 
 <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/empate.png" alt="Empate" width="300">
-<br>
 Figura 7. Cenário de teste onde ocorreu empate
 
 - Iniciar jogo
 <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/menu inicio.png" alt="menu inicio" width="600">
-<br>
 Figura 8. Cenário de teste para escolher alguma opção do menu
 
 - Desistir da partida atual
 <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/desistindo da partida.png" alt="desistindo da partida" width="300">
-<br>
 Figura 9. Cenário de teste desistindo da partida
 
+
 <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/partida cancelada.png" alt="partida cancelada" width="300">
-<br>
 Figura 10. Cenário de teste confirma que a partida foi cancelada
+
 
 - Sair do jogo
 <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/saindo do jogo.png" alt="saindo do jogo" width="300">
-<br>
 Figura 11. Cenário de teste encerrando e saindo do jogo
+
 
 ## Conclusão
 
