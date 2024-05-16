@@ -141,7 +141,7 @@ sudo ./jogo.exe
 
 ## Funcionamento do Jogo
 
-### Solução Geral do Problema
+#### Solução Geral do Problema
 <p align="center">
     <img src="https://github.com/leticiaribeiro7/jogo-da-velha/blob/main/Imagens/diagramaGeral.png" alt="Fluxograma geral do projeto" width="500">
     <br>
