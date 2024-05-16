@@ -104,7 +104,9 @@ O HPS (Hard Processor System) na placa DE1-SoC incorpora um processador ARM Cort
 </p>
 
 ### FPGA
-
+<p align="justify">
+O FPGA implementa várias portas periféricas, incluindo memória, módulos de temporização, entradas e saídas de áudio e vídeo, conversor analógico-digital, transmissor/receptor infravermelho e portas paralelas conectadas a chaves e LEDS. Essas características permitem que o FPGA na placa DE1-SoC seja adaptado para uma variedade de aplicações, desde processamento de dados até controle de dispositivos externos e interação com o usuário.
+</p>
 
 
 ## Execução
