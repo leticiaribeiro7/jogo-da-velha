@@ -25,7 +25,6 @@ Além disso, para complementar a experiência, foram utilizados os botões da pl
     - [Editor de texto VSCode](#editor-de-texto-vscode)
     - [Mouse](#mouse)
     - [Push Buttons](#push-buttons)
-
 - [Arquitetura Geral da DE1 SoC](#arquitetura-da-de1soc)
 - [Execução](#execução)
 - [Lógica do Jogo](#lógica-do-jogo)
